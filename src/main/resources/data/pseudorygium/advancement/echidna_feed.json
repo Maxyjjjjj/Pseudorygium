@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "pseudorygium:earthworm"
+    },
+    "title": {
+      "translate": "advancements.echidna_feed.title"
+    },
+    "description": {
+      "translate": "advancements.echidna_feed.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "echidna_feed_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "pseudorygium:feed_bear"
+}

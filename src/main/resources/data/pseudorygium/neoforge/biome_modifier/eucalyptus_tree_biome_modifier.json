@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "pseudorygium:eucalyptus_forest",
+  "features": "pseudorygium:eucalyptus_tree",
+  "step": "surface_structures"
+}

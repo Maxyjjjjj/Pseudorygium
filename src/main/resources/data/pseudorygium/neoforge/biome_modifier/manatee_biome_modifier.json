@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "river",
+  "spawners": {
+    "type": "pseudorygium:manatee",
+    "weight": 4,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

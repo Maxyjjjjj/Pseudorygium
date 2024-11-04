@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pseudorygium:block/willow_slab"
+    },
+    "type=top": {
+      "model": "pseudorygium:block/willow_slab_top"
+    },
+    "type=double": {
+      "model": "pseudorygium:block/willow_slab_full"
+    }
+  }
+}

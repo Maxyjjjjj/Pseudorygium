@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "desert",
+    "pseudorygium:cold_desert"
+  ],
+  "features": "pseudorygium:camelthorn",
+  "step": "vegetal_decoration"
+}

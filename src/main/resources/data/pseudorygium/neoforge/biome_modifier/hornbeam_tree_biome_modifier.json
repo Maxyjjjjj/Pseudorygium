@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "pseudorygium:hornbeam_forest",
+  "features": "pseudorygium:hornbeam_tree",
+  "step": "vegetal_decoration"
+}

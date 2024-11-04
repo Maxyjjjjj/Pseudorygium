@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:hornbeam_planks",
+    "pseudorygium:linden_planks",
+    "pseudorygium:willow_planks",
+    "pseudorygium:poplar_planks",
+    "pseudorygium:baobab_planks",
+    "pseudorygium:maple_planks",
+    "pseudorygium:beech_planks",
+    "pseudorygium:palm_planks",
+    "pseudorygium:aspen_planks",
+    "pseudorygium:ginkgo_planks",
+    "pseudorygium:eucalyptus_planks"
+  ]
+}

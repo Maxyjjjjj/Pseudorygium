@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "pseudorygium:block/baobab_planks",
+    "bottom": "pseudorygium:block/baobab_planks",
+    "top": "pseudorygium:block/baobab_planks",
+    "side": "pseudorygium:block/baobab_planks"
+  },
+  "render_type": "solid"
+}

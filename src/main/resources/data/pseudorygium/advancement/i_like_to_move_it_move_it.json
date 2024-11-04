@@ -1,0 +1,36 @@
+{
+  "display": {
+    "icon": {
+      "id": "pseudorygium:leaf_crown_helmet"
+    },
+    "title": {
+      "translate": "advancements.i_like_to_move_it_move_it.title"
+    },
+    "description": {
+      "translate": "advancements.i_like_to_move_it_move_it.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "i_like_to_move_it_move_it_0": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "pseudorygium:leaf_crown_helmet"
+            ],
+            "count": {
+              "min": 1,
+              "max": 1
+            }
+          }
+        ]
+      }
+    }
+  },
+  "parent": "minecraft:story/obtain_armor"
+}

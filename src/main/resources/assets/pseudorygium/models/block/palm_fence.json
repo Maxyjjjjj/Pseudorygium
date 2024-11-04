@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_side",
+  "textures": {
+    "texture": "pseudorygium:block/palm_planks",
+    "particle": "pseudorygium:block/palm_planks"
+  },
+  "render_type": "solid"
+}

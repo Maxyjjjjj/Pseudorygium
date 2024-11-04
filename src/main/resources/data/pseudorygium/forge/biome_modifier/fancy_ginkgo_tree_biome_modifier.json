@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "pseudorygium:ginkgo_forest",
+  "features": "pseudorygium:fancy_ginkgo_tree",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "pseudorygium:outback",
+  "spawners": {
+    "type": "pseudorygium:echidna",
+    "weight": 20,
+    "minCount": 2,
+    "maxCount": 2
+  }
+}

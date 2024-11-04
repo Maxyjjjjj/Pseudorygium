@@ -1,0 +1,32 @@
+modLoader="javafml"
+loaderVersion="[2,)"
+license="Academic Free License v3.0"
+
+[[mods]]
+modId="pseudorygium"
+version="9.21.1"
+displayName="Pseudorygium"
+displayURL="https://mcreator.net"
+logoFile="logo.png"
+credits="Created using mod maker MCreator - https://mcreator.net/about"
+authors="User, MCreator"
+
+# Start of user code block mod configuration
+# End of user code block mod configuration
+
+[[dependencies.pseudorygium]]
+    modId="neoforge"
+    type="required"
+    versionRange="[20.4.223,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.pseudorygium]]
+    modId="minecraft"
+    type="required"
+    versionRange="[1.20.4]"
+    ordering="NONE"
+    side="BOTH"
+
+
+

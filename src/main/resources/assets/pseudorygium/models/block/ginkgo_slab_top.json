@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab_top",
+  "textures": {
+    "particle": "pseudorygium:block/ginkgo_planks",
+    "bottom": "pseudorygium:block/ginkgo_planks",
+    "top": "pseudorygium:block/ginkgo_planks",
+    "side": "pseudorygium:block/ginkgo_planks"
+  },
+  "render_type": "solid"
+}

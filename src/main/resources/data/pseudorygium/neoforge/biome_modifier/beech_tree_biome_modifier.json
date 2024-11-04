@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "pseudorygium:beech_forest",
+  "features": "pseudorygium:beech_tree",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "pseudorygium:steppe_tundra",
+  "spawners": {
+    "type": "pseudorygium:woolly_rhinoceros",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pseudorygium:block/hornbeam_log_top",
+    "up": "pseudorygium:block/hornbeam_log_top",
+    "north": "pseudorygium:block/hornbeam_log",
+    "east": "pseudorygium:block/hornbeam_log",
+    "south": "pseudorygium:block/hornbeam_log",
+    "west": "pseudorygium:block/hornbeam_log",
+    "particle": "pseudorygium:block/hornbeam_log_top"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "pseudorygium:block/eucalyptus_leaves",
+    "particle": "pseudorygium:block/eucalyptus_leaves"
+  }
+}

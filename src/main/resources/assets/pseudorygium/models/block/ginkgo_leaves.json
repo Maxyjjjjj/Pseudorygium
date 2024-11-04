@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "pseudorygium:block/ginkgo_leaves",
+    "particle": "pseudorygium:block/ginkgo_leaves"
+  }
+}

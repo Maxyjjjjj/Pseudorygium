@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pseudorygium:block/poplar_slab"
+    },
+    "type=top": {
+      "model": "pseudorygium:block/poplar_slab_top"
+    },
+    "type=double": {
+      "model": "pseudorygium:block/poplar_slab_full"
+    }
+  }
+}

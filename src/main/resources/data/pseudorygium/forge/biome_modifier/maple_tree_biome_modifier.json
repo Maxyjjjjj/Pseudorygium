@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "pseudorygium:maple_forest",
+  "features": "pseudorygium:maple_tree",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:steppe",
+    "pseudorygium:steppe_tundra",
+    "pseudorygium:tundra",
+    "pseudorygium:willow_swamp",
+    "plains",
+    "snowy_plains",
+    "sunflower_plains"
+  ],
+  "spawners": {
+    "type": "pseudorygium:raccoon",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smoking",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "FOOD",
+    "xpReward": 1.0,
+    "cookingTime": 600,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smokingInputStack": {
+      "value": "CUSTOM:RawPheasant"
+    },
+    "smokingReturnStack": {
+      "value": "CUSTOM:CookedPheasant"
+    },
+    "name": "smoke_pheasant",
+    "namespace": "mod"
+  }
+}

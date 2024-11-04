@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "minecraft:sugar"
+    },
+    "title": {
+      "translate": "advancements.diabetes.title"
+    },
+    "description": {
+      "translate": "advancements.diabetes.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "diabetes_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "pseudorygium:feed_bear"
+}

@@ -1,0 +1,19 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "flower_forest",
+    "pseudorygium:aspen_forest",
+    "pseudorygium:beech_forest",
+    "pseudorygium:ginkgo_forest",
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:linden_forest",
+    "pseudorygium:maple_forest",
+    "pseudorygium:poplar_forest",
+    "birch_forest",
+    "dark_forest",
+    "forest",
+    "old_growth_birch_forest"
+  ],
+  "features": "pseudorygium:daffodil",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,17 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "bamboo_jungle",
+    "jungle",
+    "sparse_jungle",
+    "savanna",
+    "savanna_plateau",
+    "windswept_savanna"
+  ],
+  "spawners": {
+    "type": "pseudorygium:cobra",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

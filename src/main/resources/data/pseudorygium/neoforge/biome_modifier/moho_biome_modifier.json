@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "jungle",
+  "spawners": {
+    "type": "pseudorygium:moho",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

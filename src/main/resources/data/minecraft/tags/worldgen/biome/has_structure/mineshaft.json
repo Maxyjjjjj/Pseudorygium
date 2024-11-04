@@ -1,0 +1,18 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:lavender_fields",
+    "pseudorygium:ginkgo_forest",
+    "pseudorygium:aspen_forest",
+    "pseudorygium:beech_forest",
+    "pseudorygium:maple_forest",
+    "pseudorygium:scrub",
+    "pseudorygium:pampas",
+    "pseudorygium:baobab_savanna",
+    "pseudorygium:steppe_tundra",
+    "pseudorygium:willow_swamp",
+    "pseudorygium:tundra",
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:steppe"
+  ]
+}

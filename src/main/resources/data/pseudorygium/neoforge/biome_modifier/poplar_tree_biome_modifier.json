@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "pseudorygium:poplar_forest",
+  "features": "pseudorygium:poplar_tree",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:steppe_tundra",
+    "pseudorygium:tundra",
+    "snowy_plains"
+  ],
+  "spawners": {
+    "type": "pseudorygium:ptarmigan",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

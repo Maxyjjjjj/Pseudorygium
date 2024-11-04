@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pseudorygium:block/willow_log_top",
+    "up": "pseudorygium:block/willow_log_top",
+    "north": "pseudorygium:block/willow_log",
+    "east": "pseudorygium:block/willow_log",
+    "south": "pseudorygium:block/willow_log",
+    "west": "pseudorygium:block/willow_log",
+    "particle": "pseudorygium:block/willow_log_top"
+  },
+  "render_type": "solid"
+}

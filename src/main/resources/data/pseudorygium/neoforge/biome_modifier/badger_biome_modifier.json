@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "pseudorygium:hornbeam_forest",
+  "spawners": {
+    "type": "pseudorygium:badger",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

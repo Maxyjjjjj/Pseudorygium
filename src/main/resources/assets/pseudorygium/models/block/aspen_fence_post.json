@@ -1,0 +1,8 @@
+{
+  "parent": "block/fence_post",
+  "textures": {
+    "texture": "pseudorygium:block/aspen_planks",
+    "particle": "pseudorygium:block/aspen_planks"
+  },
+  "render_type": "solid"
+}

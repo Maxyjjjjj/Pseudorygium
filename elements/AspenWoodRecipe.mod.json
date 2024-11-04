@@ -1,0 +1,48 @@
+{
+  "_fv": 69,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 3,
+    "group": "bark",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "BUILDING",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:AspenLog"
+      },
+      {
+        "value": "CUSTOM:AspenLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:AspenLog"
+      },
+      {
+        "value": "CUSTOM:AspenLog"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": ""
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:AspenWood"
+    },
+    "name": "aspen_wood_recipe",
+    "namespace": "mod"
+  }
+}

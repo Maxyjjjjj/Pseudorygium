@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_trapdoor",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "pseudorygium:willow_planks"
+    }
+  },
+  "result": {
+    "id": "pseudorygium:willow_trapdoor",
+    "count": 2
+  }
+}

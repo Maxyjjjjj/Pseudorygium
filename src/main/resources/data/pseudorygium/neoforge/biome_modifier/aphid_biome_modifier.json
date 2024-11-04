@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#pseudorygium:biomes_where_snails_survive",
+  "spawners": {
+    "type": "pseudorygium:aphid",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

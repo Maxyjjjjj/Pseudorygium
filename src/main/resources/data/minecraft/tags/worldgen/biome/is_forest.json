@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:poplar_forest",
+    "pseudorygium:maple_forest",
+    "pseudorygium:linden_forest",
+    "pseudorygium:beech_forest",
+    "pseudorygium:aspen_forest",
+    "pseudorygium:ginkgo_forest"
+  ]
+}

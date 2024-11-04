@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "pseudorygium:willow_swamp",
+    "mangrove_swamp",
+    "swamp"
+  ],
+  "features": "pseudorygium:venus_flytrap",
+  "step": "vegetal_decoration"
+}

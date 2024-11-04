@@ -1,0 +1,21 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.SCULK_SHRIEKER"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.llama.spit"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 1.0,
+    "knockback": 2,
+    "entityModel": "Modelcamel_spit",
+    "customModelTexture": "camel_spit.png",
+    "modelWidth": 0.5,
+    "modelHeight": 0.5
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "pseudorygium:scrub",
+  "features": "pseudorygium:scrub_shrub",
+  "step": "vegetal_decoration"
+}

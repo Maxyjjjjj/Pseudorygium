@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:aspen_forest",
+    "pseudorygium:beech_forest",
+    "pseudorygium:ginkgo_forest",
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:lavender_fields",
+    "pseudorygium:linden_forest",
+    "pseudorygium:maple_forest",
+    "pseudorygium:pampas",
+    "pseudorygium:poplar_forest",
+    "pseudorygium:scrub",
+    "pseudorygium:steppe",
+    "birch_forest",
+    "cherry_grove",
+    "pseudorygium:steppe_tundra",
+    "pseudorygium:tundra",
+    "plains",
+    "snowy_plains",
+    "sunflower_plains",
+    "#minecraft:is_forest",
+    "meadow"
+  ]
+}

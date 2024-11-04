@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:eucalyptus_stairs",
+    "pseudorygium:ginkgo_stairs",
+    "pseudorygium:aspen_stairs",
+    "pseudorygium:palm_stairs",
+    "pseudorygium:beech_stairs",
+    "pseudorygium:maple_stairs",
+    "pseudorygium:baobab_stairs",
+    "pseudorygium:poplar_stairs",
+    "pseudorygium:willow_stairs",
+    "pseudorygium:linden_stairs",
+    "pseudorygium:hornbeam_stairs"
+  ]
+}

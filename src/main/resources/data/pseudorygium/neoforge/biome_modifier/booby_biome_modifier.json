@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "beach",
+  "spawners": {
+    "type": "pseudorygium:booby",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

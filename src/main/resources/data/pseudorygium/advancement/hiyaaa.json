@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "pseudorygium:open_coconut"
+    },
+    "title": {
+      "translate": "advancements.hiyaaa.title"
+    },
+    "description": {
+      "translate": "advancements.hiyaaa.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "hiyaaa_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "pseudorygium:katana_get"
+}

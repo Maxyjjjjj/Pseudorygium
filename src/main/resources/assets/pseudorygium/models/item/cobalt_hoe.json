@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "pseudorygium:item/cobalt_hoe"
+  }
+}

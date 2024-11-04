@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "pseudorygium:block/silver_block",
+    "particle": "pseudorygium:block/silver_block"
+  },
+  "render_type": "solid"
+}

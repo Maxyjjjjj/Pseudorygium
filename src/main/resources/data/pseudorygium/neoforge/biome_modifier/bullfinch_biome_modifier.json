@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "snowy_plains",
+    "snowy_taiga",
+    "pseudorygium:tundra"
+  ],
+  "spawners": {
+    "type": "pseudorygium:bullfinch",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

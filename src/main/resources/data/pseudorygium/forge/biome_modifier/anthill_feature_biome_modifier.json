@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#pseudorygium:biomes_where_snails_survive",
+  "features": "pseudorygium:anthill_feature",
+  "step": "local_modifications"
+}

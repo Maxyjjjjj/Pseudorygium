@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pseudorygium:block/eucalyptus_slab"
+    },
+    "type=top": {
+      "model": "pseudorygium:block/eucalyptus_slab_top"
+    },
+    "type=double": {
+      "model": "pseudorygium:block/eucalyptus_slab_full"
+    }
+  }
+}

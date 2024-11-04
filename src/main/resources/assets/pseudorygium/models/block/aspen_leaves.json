@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "pseudorygium:block/aspen_leaves",
+    "particle": "pseudorygium:block/aspen_leaves"
+  }
+}

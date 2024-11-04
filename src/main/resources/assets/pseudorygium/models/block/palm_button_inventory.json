@@ -1,0 +1,8 @@
+{
+  "parent": "block/button_inventory",
+  "textures": {
+    "particle": "pseudorygium:block/palm_planks",
+    "texture": "pseudorygium:block/palm_planks"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,14 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:sand",
+    "minecraft:snow_block",
+    "minecraft:ice",
+    "minecraft:packed_ice",
+    "minecraft:frosted_ice",
+    "minecraft:blue_ice",
+    "minecraft:red_sand",
+    "pseudorygium:cold_desert_grass",
+    "pseudorygium:cold_desert_dirt"
+  ]
+}

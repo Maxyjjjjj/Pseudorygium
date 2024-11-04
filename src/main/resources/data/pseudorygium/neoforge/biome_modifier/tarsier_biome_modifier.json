@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "bamboo_jungle",
+    "jungle",
+    "sparse_jungle"
+  ],
+  "spawners": {
+    "type": "pseudorygium:tarsier",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

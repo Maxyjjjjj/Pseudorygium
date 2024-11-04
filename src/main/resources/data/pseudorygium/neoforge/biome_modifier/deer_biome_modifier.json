@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#is_forest",
+  "spawners": {
+    "type": "pseudorygium:deer",
+    "weight": 10,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

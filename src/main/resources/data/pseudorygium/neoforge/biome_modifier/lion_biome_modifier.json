@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#is_savanna",
+  "spawners": {
+    "type": "pseudorygium:lion",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 5
+  }
+}

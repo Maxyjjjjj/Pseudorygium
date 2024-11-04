@@ -1,0 +1,8 @@
+{
+  "parent": "block/template_orientable_trapdoor_top",
+  "textures": {
+    "texture": "pseudorygium:block/beech_trapdoor",
+    "particle": "pseudorygium:block/beech_trapdoor"
+  },
+  "render_type": "cutout_mipped"
+}

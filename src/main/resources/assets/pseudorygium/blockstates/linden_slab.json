@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pseudorygium:block/linden_slab"
+    },
+    "type=top": {
+      "model": "pseudorygium:block/linden_slab_top"
+    },
+    "type=double": {
+      "model": "pseudorygium:block/linden_slab_full"
+    }
+  }
+}

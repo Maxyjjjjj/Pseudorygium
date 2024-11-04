@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "never",
+    "effects": "poking",
+    "normalDeathMessage": "%1$s thought poking hedgehogs was okay",
+    "itemDeathMessage": "%1$s thought poking hedgehogs was okay using %3$s",
+    "playerDeathMessage": "%1$s thought poking hedgehogs was okay whilst trying to escape %2$s"
+  }
+}

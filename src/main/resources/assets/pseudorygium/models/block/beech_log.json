@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pseudorygium:block/beech_log_top",
+    "up": "pseudorygium:block/beech_log_top",
+    "north": "pseudorygium:block/beech_log",
+    "east": "pseudorygium:block/beech_log",
+    "south": "pseudorygium:block/beech_log",
+    "west": "pseudorygium:block/beech_log",
+    "particle": "pseudorygium:block/beech_log_top"
+  },
+  "render_type": "solid"
+}

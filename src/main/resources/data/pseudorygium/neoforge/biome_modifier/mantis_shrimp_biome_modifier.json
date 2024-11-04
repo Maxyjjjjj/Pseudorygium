@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "warm_ocean",
+  "spawners": {
+    "type": "pseudorygium:mantis_shrimp",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

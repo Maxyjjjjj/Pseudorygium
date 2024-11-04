@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "plains",
+    "sunflower_plains"
+  ],
+  "spawners": {
+    "type": "pseudorygium:robin",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

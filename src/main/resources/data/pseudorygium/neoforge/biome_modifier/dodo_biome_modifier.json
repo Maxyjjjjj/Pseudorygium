@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "bamboo_jungle",
+    "jungle",
+    "sparse_jungle",
+    "pseudorygium:scrub"
+  ],
+  "spawners": {
+    "type": "pseudorygium:dodo",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

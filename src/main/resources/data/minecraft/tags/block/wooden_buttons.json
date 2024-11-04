@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:hornbeam_button",
+    "pseudorygium:linden_button",
+    "pseudorygium:willow_button",
+    "pseudorygium:poplar_button",
+    "pseudorygium:baobab_button",
+    "pseudorygium:maple_button",
+    "pseudorygium:beech_button",
+    "pseudorygium:palm_button",
+    "pseudorygium:aspen_button",
+    "pseudorygium:ginkgo_button",
+    "pseudorygium:eucalyptus_button"
+  ]
+}

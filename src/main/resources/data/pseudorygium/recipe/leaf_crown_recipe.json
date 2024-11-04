@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "pseudorygium:leaf"
+    }
+  },
+  "result": {
+    "id": "pseudorygium:leaf_crown_helmet",
+    "count": 1
+  }
+}

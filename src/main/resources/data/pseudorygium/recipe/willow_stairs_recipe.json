@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_stairs",
+  "category": "building",
+  "pattern": [
+    "a  ",
+    "aa ",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "pseudorygium:willow_planks"
+    }
+  },
+  "result": {
+    "id": "pseudorygium:willow_stairs",
+    "count": 4
+  }
+}

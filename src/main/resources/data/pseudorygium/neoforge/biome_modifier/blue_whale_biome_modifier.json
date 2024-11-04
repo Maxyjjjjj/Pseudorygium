@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#is_ocean",
+  "spawners": {
+    "type": "pseudorygium:blue_whale",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pseudorygium:block/linden_log_top",
+    "up": "pseudorygium:block/linden_log_top",
+    "north": "pseudorygium:block/linden_log",
+    "east": "pseudorygium:block/linden_log",
+    "south": "pseudorygium:block/linden_log",
+    "west": "pseudorygium:block/linden_log",
+    "particle": "pseudorygium:block/linden_log_top"
+  },
+  "render_type": "solid"
+}

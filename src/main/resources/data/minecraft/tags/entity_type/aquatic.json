@@ -1,0 +1,22 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:narwhal",
+    "pseudorygium:mantis_shrimp",
+    "pseudorygium:seadragon",
+    "pseudorygium:seahorse",
+    "pseudorygium:fiddler_crab",
+    "pseudorygium:humpback_whale",
+    "pseudorygium:paddlefish",
+    "pseudorygium:white_shark",
+    "pseudorygium:sawfish",
+    "pseudorygium:beluga_sturgeon",
+    "pseudorygium:beluga_whale",
+    "pseudorygium:orca",
+    "pseudorygium:blue_whale",
+    "pseudorygium:shrimp",
+    "pseudorygium:octopus",
+    "pseudorygium:crab",
+    "pseudorygium:barreleye"
+  ]
+}

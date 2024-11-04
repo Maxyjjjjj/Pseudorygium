@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pseudorygium:block/aspen_slab"
+    },
+    "type=top": {
+      "model": "pseudorygium:block/aspen_slab_top"
+    },
+    "type=double": {
+      "model": "pseudorygium:block/aspen_slab_full"
+    }
+  }
+}

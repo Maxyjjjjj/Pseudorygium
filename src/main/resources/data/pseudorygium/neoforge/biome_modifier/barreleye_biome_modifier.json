@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#is_deep_ocean",
+  "spawners": {
+    "type": "pseudorygium:barreleye",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

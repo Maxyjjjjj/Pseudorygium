@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "flower_forest",
+    "sunflower_plains",
+    "cherry_grove",
+    "meadow"
+  ],
+  "spawners": {
+    "type": "pseudorygium:hummingbird",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

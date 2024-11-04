@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:lavender_fields",
+    "pseudorygium:aspen_forest",
+    "pseudorygium:beech_forest",
+    "pseudorygium:maple_forest",
+    "pseudorygium:linden_forest",
+    "pseudorygium:steppe_tundra",
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:steppe"
+  ]
+}

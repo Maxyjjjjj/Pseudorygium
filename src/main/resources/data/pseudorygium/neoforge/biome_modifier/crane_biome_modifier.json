@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "plains",
+    "pseudorygium:steppe",
+    "pseudorygium:steppe_tundra",
+    "cherry_grove"
+  ],
+  "spawners": {
+    "type": "pseudorygium:crane",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

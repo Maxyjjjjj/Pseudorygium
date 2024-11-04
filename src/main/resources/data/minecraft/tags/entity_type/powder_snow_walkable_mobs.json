@@ -1,0 +1,29 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:ant",
+    "pseudorygium:aphid",
+    "pseudorygium:aye_aye",
+    "pseudorygium:bactrian_camel",
+    "pseudorygium:badger",
+    "pseudorygium:bandicoot",
+    "pseudorygium:booby",
+    "pseudorygium:snow_leopard",
+    "pseudorygium:chamois",
+    "pseudorygium:chiru",
+    "pseudorygium:caterpillar",
+    "pseudorygium:pallas_cat",
+    "pseudorygium:duck",
+    "pseudorygium:monkey",
+    "pseudorygium:tanuki",
+    "pseudorygium:flying_squirrel",
+    "pseudorygium:yak",
+    "pseudorygium:jerboa",
+    "pseudorygium:jumping_spider",
+    "pseudorygium:raccoon",
+    "pseudorygium:moose",
+    "pseudorygium:woolly_rhinoceros",
+    "pseudorygium:mammoth",
+    "pseudorygium:smilodon"
+  ]
+}

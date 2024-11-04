@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "pseudorygium:steppe",
+  "spawners": {
+    "type": "pseudorygium:saiga",
+    "weight": 5,
+    "minCount": 6,
+    "maxCount": 8
+  }
+}

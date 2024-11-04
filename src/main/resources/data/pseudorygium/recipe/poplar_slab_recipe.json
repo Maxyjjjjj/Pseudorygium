@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "category": "building",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "pseudorygium:poplar_planks"
+    }
+  },
+  "result": {
+    "id": "pseudorygium:poplar_slab",
+    "count": 6
+  }
+}

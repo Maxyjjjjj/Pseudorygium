@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "stony_shore",
+  "spawners": {
+    "type": "pseudorygium:sea_otter",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

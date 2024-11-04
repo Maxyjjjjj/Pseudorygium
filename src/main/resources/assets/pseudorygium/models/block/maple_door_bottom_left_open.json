@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_bottom_left_open",
+  "textures": {
+    "particle": "pseudorygium:block/maple_door_bottom",
+    "bottom": "pseudorygium:block/maple_door_bottom",
+    "top": "pseudorygium:block/maple_door_top"
+  },
+  "render_type": "cutout"
+}

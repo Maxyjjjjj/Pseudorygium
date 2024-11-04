@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "beach",
+    "stony_shore"
+  ],
+  "spawners": {
+    "type": "pseudorygium:sea_lion",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:baobab_savanna",
+    "bamboo_jungle",
+    "jungle",
+    "sparse_jungle"
+  ],
+  "spawners": {
+    "type": "pseudorygium:tenrec",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

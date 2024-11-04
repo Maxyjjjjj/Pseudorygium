@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "pseudorygium:stripped_baobab_wood"
+    }
+  ],
+  "result": {
+    "id": "pseudorygium:baobab_planks",
+    "count": 4
+  }
+}

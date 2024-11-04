@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "swamp",
+  "spawners": {
+    "type": "pseudorygium:stork",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

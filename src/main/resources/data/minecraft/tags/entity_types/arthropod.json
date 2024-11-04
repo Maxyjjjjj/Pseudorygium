@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:dragonfly",
+    "pseudorygium:ant",
+    "pseudorygium:ladybug",
+    "pseudorygium:jumping_spider",
+    "pseudorygium:aphid",
+    "pseudorygium:butterfly",
+    "pseudorygium:mantis"
+  ]
+}

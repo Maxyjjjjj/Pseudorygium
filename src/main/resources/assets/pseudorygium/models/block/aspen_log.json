@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pseudorygium:block/aspen_log_top",
+    "up": "pseudorygium:block/aspen_log_top",
+    "north": "pseudorygium:block/aspen_log",
+    "east": "pseudorygium:block/aspen_log",
+    "south": "pseudorygium:block/aspen_log",
+    "west": "pseudorygium:block/aspen_log",
+    "particle": "pseudorygium:block/aspen_log_top"
+  },
+  "render_type": "solid"
+}

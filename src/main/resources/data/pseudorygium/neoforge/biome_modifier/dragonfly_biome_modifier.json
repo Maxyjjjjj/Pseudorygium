@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:willow_swamp",
+    "mangrove_swamp",
+    "swamp"
+  ],
+  "spawners": {
+    "type": "pseudorygium:dragonfly",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

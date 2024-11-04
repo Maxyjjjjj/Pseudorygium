@@ -1,0 +1,18 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "bamboo_jungle",
+    "jungle",
+    "sparse_jungle",
+    "pseudorygium:baobab_savanna",
+    "savanna",
+    "savanna_plateau",
+    "windswept_savanna"
+  ],
+  "spawners": {
+    "type": "pseudorygium:mongoose",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

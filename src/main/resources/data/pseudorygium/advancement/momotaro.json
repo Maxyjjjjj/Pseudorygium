@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "pseudorygium:coconut_block"
+    },
+    "title": {
+      "translate": "advancements.momotaro.title"
+    },
+    "description": {
+      "translate": "advancements.momotaro.descr"
+    },
+    "frame": "goal",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "momotaro_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "pseudorygium:trade_with_chimp"
+}

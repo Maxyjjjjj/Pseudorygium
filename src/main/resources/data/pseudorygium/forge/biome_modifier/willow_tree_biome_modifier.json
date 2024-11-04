@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "pseudorygium:willow_swamp",
+  "features": "pseudorygium:willow_tree",
+  "step": "vegetal_decoration"
+}

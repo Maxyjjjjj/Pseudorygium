@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:steppe",
+    "pseudorygium:steppe_tundra"
+  ],
+  "spawners": {
+    "type": "pseudorygium:przevalski_horse",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

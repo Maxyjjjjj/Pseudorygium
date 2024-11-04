@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "pseudorygium:block/daffodil",
+    "particle": "pseudorygium:block/daffodil"
+  },
+  "render_type": "cutout"
+}

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:steppe",
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:outback",
+    "pseudorygium:steppe_tundra",
+    "pseudorygium:tundra",
+    "pseudorygium:willow_swamp",
+    "pseudorygium:cold_desert",
+    "pseudorygium:baobab_savanna",
+    "pseudorygium:poplar_forest",
+    "pseudorygium:pampas",
+    "pseudorygium:scrub",
+    "pseudorygium:linden_forest",
+    "pseudorygium:maple_forest",
+    "pseudorygium:aspen_forest",
+    "pseudorygium:beech_forest",
+    "pseudorygium:ginkgo_forest"
+  ]
+}

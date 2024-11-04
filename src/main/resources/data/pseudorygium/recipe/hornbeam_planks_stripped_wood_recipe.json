@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "pseudorygium:stripped_hornbeam_wood"
+    }
+  ],
+  "result": {
+    "id": "pseudorygium:hornbeam_planks",
+    "count": 4
+  }
+}

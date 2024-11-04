@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "pseudorygium:outback",
+  "features": "pseudorygium:eucalyptus_bushlet",
+  "step": "vegetal_decoration"
+}

@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:eucalyptus_slab",
+    "pseudorygium:ginkgo_slab",
+    "pseudorygium:aspen_slab",
+    "pseudorygium:palm_slab",
+    "pseudorygium:beech_slab",
+    "pseudorygium:maple_slab",
+    "pseudorygium:baobab_slab",
+    "pseudorygium:poplar_slab",
+    "pseudorygium:willow_slab",
+    "pseudorygium:linden_slab",
+    "pseudorygium:hornbeam_slab"
+  ]
+}

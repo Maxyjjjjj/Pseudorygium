@@ -1,0 +1,24 @@
+{
+  "description": {
+    "translate": "enchantment.pseudorygium.fruit_ninja"
+  },
+  "supported_items": [
+    "pseudorygium:katana",
+    "pseudorygium:netherite_katana"
+  ],
+  "weight": 10,
+  "max_level": 1,
+  "min_cost": {
+    "base": 1,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 6,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 1,
+  "slots": [
+    "mainhand"
+  ],
+  "exclusive_set": []
+}

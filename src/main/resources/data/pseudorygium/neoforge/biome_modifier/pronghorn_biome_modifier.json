@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:steppe",
+    "sunflower_plains",
+    "plains"
+  ],
+  "spawners": {
+    "type": "pseudorygium:pronghorn",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 8
+  }
+}

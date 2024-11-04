@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "pseudorygium:eucalyptus_forest",
+  "spawners": {
+    "type": "pseudorygium:koala",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 2
+  }
+}

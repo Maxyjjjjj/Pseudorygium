@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#pseudorygium:biomes_that_support_water_lakes",
+  "spawners": {
+    "type": "pseudorygium:carp",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

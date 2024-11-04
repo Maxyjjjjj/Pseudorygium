@@ -1,0 +1,7 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "pseudorygium:item/coconut"
+  },
+  "render_type": "translucent"
+}

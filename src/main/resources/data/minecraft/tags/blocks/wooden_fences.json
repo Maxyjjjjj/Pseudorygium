@@ -1,0 +1,27 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:hornbeam_fence",
+    "pseudorygium:hornbeam_fence_gate",
+    "pseudorygium:linden_fence",
+    "pseudorygium:linden_fence_gate",
+    "pseudorygium:willow_fence",
+    "pseudorygium:willow_fence_gate",
+    "pseudorygium:poplar_fence",
+    "pseudorygium:poplar_fence_gate",
+    "pseudorygium:baobab_fence",
+    "pseudorygium:baobab_fence_gate",
+    "pseudorygium:maple_fence",
+    "pseudorygium:maple_fence_gate",
+    "pseudorygium:beech_fence",
+    "pseudorygium:beech_fence_gate",
+    "pseudorygium:palm_fence",
+    "pseudorygium:palm_fence_gate",
+    "pseudorygium:aspen_fence",
+    "pseudorygium:aspen_fence_gate",
+    "pseudorygium:ginkgo_fence",
+    "pseudorygium:ginkgo_fence_gate",
+    "pseudorygium:eucalyptus_fence",
+    "pseudorygium:eucalyptus_fence_gate"
+  ]
+}

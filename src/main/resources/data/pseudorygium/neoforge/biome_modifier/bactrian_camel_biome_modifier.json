@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:steppe",
+    "pseudorygium:outback"
+  ],
+  "spawners": {
+    "type": "pseudorygium:bactrian_camel",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

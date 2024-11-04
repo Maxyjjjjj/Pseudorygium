@@ -1,0 +1,23 @@
+/summon minecraft:axolotl ~ ~ ~ {Variant:5}
+/summon minecraft:axolotl ~ ~ ~ {Variant:4}
+/give @s pseudorygium:coconut_block 128
+/give Dev minecraft:splash_potion{Potion:"minecraft:water",CustomPotionEffects:[{Id:2,Amplifier:6,Duration:-1,ShowParticles:0b}]} 1
+/give Dev minecraft:splash_potion{Potion:"minecraft:slowness",CustomPotionEffects:[{Id:2,Amplifier:6,Duration:-1,ShowParticles:0b}]} 1
+/give Dev minecraft:splash_potion{Potion:"minecraft:slowness6",CustomPotionEffects:[{Id:2,Amplifier:6,Duration:-1,ShowParticles:0b}]} 1
+/give Dev minecraft:splash_potion{Potion:"minecraft:slowness",CustomPotionEffects:[{Id:2,Amplifier:6,Duration:-1},{Id:20,Amplifier:1,Duration:300}]} 1
+/give Dev minecraft:splash_potion{Potion:"minecraft:slowness",CustomPotionEffects:[{Id:2,Amplifier:6,Duration:-1},{Id:20,Amplifier:1,Duration:300}]}
+/give Dev minecraft:splash_potion{CustomPotionEffects:[{Id:2,Amplifier:6,Duration:-1},{Id:20,Amplifier:1,Duration:300}]}
+/give Dev minecraft:splash_potion{Name:"PheasantKiller",CustomPotionEffects:[{Id:2,Amplifier:6,Duration:-1},{Id:20,Amplifier:1,Duration:300}]}
+/give Dev minecraft:splash_potion{Name:"Pheasant Killer",CustomPotionEffects:[{id:slowness,amplifier:6,duration:-1},{id:wither,amplifier:3,duration:300}]}
+/give Dev minecraft:splash_potion{Name:"Pheasant Killer",custom_potion_effects:[{id:slowness,amplifier:6,duration:-1},{id:wither,amplifier:3,duration:300}]}
+/time set day
+/data merge block -8 -59 9 {LootTable:"pseudorygium:chests/yurt_food"}
+/data merge storage -8 -59 9 {LootTable:"pseudorygium:chests/yurt_food"}
+/data merge entity -8 -59 9 {LootTable:"pseudorygium:chests/yurt_food"}
+/data merge block -8 -59 9 {LootTable:"pseudorygium:chests/yurt_food"}
+/data merge block -8 -60 9 {LootTable:"pseudorygium:chests/yurt_food"}
+/data merge block -8 -60 7 {LootTable:"pseudorygium:chests/yurt_non_food"}
+/locate biome pseudorygium:steppe
+/tp @s -1686 129 -1939
+/effect give Dev minecraft:hunger 300 4
+/summon minecraft:armor_stand ~ ~ ~ {ShowArms:1b}

@@ -1,0 +1,12 @@
+{
+  "type": "pseudorygium:structure_feature",
+  "config": {
+    "structure": "pseudorygium:palm_tree",
+    "ignored_blocks": "minecraft:air",
+    "offset": [
+      -3,
+      0,
+      -3
+    ]
+  }
+}

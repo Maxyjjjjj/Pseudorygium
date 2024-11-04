@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "pseudorygium:poplar_planks"
+    }
+  ],
+  "result": {
+    "id": "pseudorygium:poplar_button",
+    "count": 1
+  }
+}

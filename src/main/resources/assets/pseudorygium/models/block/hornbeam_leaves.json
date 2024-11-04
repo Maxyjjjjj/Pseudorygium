@@ -1,0 +1,7 @@
+{
+  "parent": "block/leaves",
+  "textures": {
+    "all": "pseudorygium:block/hornbeam_leaves",
+    "particle": "pseudorygium:block/hornbeam_leaves"
+  }
+}

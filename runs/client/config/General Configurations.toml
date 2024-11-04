@@ -1,0 +1,5 @@
+
+[Entities]
+	#Determines if mobs drop carcasses
+	"Enable Carcasses" = false
+

@@ -1,0 +1,24 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:steppe",
+    "pseudorygium:willow_swamp",
+    "#is_forest",
+    "#is_hill",
+    "#is_jungle",
+    "#is_savanna",
+    "plains",
+    "sunflower_plains",
+    "mangrove_swamp",
+    "swamp",
+    "wooded_badlands",
+    "pseudorygium:outback",
+    "pseudorygium:pampas",
+    "pseudorygium:poplar_forest",
+    "pseudorygium:scrub",
+    "pseudorygium:cold_desert",
+    "pseudorygium:maple_forest",
+    "pseudorygium:baobab_savanna"
+  ]
+}

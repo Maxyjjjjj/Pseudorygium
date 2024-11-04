@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "deep_cold_ocean",
+    "deep_frozen_ocean",
+    "deep_lukewarm_ocean",
+    "deep_ocean"
+  ],
+  "spawners": {
+    "type": "pseudorygium:sea_pig",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

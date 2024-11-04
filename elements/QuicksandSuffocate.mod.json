@@ -1,0 +1,12 @@
+{
+  "_fv": 69,
+  "_type": "damagetype",
+  "definition": {
+    "exhaustion": 0.1,
+    "scaling": "never",
+    "effects": "burning",
+    "normalDeathMessage": "%1$s drowned in quicksand",
+    "itemDeathMessage": "%1$s drowned in quicksand while %2$s used %3$s",
+    "playerDeathMessage": "%1$s drowned in quicksand whilst trying to escape %2$s"
+  }
+}

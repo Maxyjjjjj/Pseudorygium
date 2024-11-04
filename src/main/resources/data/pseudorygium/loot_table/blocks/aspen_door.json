@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:block",
+  "random_sequence": "pseudorygium:blocks/aspen_door",
+  "pools": [
+    {
+      "rolls": 1.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "pseudorygium:aspen_door",
+          "conditions": [
+            {
+              "block": "pseudorygium:aspen_door",
+              "condition": "minecraft:block_state_property",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

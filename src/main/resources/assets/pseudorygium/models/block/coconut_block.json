@@ -1,0 +1,9 @@
+{
+  "parent": "pseudorygium:custom/coconut_block",
+  "textures": {
+    "all": "pseudorygium:block/coconut",
+    "particle": "pseudorygium:block/coconut",
+    "0": "pseudorygium:block/coconut"
+  },
+  "render_type": "solid"
+}

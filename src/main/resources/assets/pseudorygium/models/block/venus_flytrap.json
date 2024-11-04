@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "pseudorygium:block/venus_flytrap",
+    "particle": "pseudorygium:block/venus_flytrap"
+  },
+  "render_type": "cutout"
+}

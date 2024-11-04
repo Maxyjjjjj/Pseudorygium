@@ -1,0 +1,8 @@
+{
+  "parent": "block/tinted_cross",
+  "textures": {
+    "cross": "pseudorygium:block/dark_bush",
+    "particle": "pseudorygium:block/dark_bush"
+  },
+  "render_type": "cutout"
+}

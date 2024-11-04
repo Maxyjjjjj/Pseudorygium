@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:steppe",
+    "plains",
+    "sunflower_plains"
+  ],
+  "spawners": {
+    "type": "pseudorygium:mantis",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

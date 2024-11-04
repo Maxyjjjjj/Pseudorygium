@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:ant",
+    "pseudorygium:aphid",
+    "pseudorygium:butterfly",
+    "silverfish",
+    "pseudorygium:caterpillar",
+    "pseudorygium:ladybug"
+  ]
+}

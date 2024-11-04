@@ -1,0 +1,14 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:hornbeam_forest",
+    "pseudorygium:steppe",
+    "plains"
+  ],
+  "spawners": {
+    "type": "pseudorygium:chaffinch",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

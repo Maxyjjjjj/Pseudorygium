@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "pseudorygium:baobab_savanna",
+  "features": "pseudorygium:baobab_tree",
+  "step": "vegetal_decoration"
+}

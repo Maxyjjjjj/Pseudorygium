@@ -1,0 +1,15 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "bamboo_jungle",
+    "jungle",
+    "sparse_jungle",
+    "pseudorygium:baobab_savanna"
+  ],
+  "spawners": {
+    "type": "pseudorygium:fruit_bat",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

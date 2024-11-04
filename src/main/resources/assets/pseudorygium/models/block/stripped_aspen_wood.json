@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "pseudorygium:block/stripped_aspen_log",
+    "particle": "pseudorygium:block/stripped_aspen_log"
+  },
+  "render_type": "solid"
+}

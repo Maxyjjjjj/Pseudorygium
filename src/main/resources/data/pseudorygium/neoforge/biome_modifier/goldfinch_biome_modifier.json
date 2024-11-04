@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#is_forest",
+  "spawners": {
+    "type": "pseudorygium:goldfinch",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

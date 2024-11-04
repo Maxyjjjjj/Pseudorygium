@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:chamois",
+    "pseudorygium:chiru",
+    "pseudorygium:marmot",
+    "pseudorygium:mammoth",
+    "pseudorygium:snow_leopard",
+    "pseudorygium:woolly_rhinoceros",
+    "pseudorygium:smilodon",
+    "pseudorygium:bactrian_camel"
+  ]
+}

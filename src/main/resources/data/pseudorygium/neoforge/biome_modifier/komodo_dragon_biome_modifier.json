@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "sparse_jungle",
+  "spawners": {
+    "type": "pseudorygium:komodo_dragon",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 5
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "parent": "block/door_bottom_left_open",
+  "textures": {
+    "particle": "pseudorygium:block/willow_door_bottom",
+    "bottom": "pseudorygium:block/willow_door_bottom",
+    "top": "pseudorygium:block/willow_door_top"
+  },
+  "render_type": "solid"
+}

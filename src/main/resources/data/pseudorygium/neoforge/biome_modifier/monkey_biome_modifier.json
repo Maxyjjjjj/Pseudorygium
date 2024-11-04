@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "windswept_forest",
+  "spawners": {
+    "type": "pseudorygium:monkey",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

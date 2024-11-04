@@ -1,0 +1,55 @@
+{
+  "type": "minecraft:ore",
+  "config": {
+    "size": 16,
+    "discard_chance_on_air_exposure": 0,
+    "targets": [
+      {
+        "target": {
+          "predicate_type": "tag_match",
+          "tag": "minecraft:dirt"
+        },
+        "state": {
+          "Name": "pseudorygium:permafrost"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:grass_block",
+            "Properties": {
+              "snowy": "false"
+            }
+          }
+        },
+        "state": {
+          "Name": "pseudorygium:permafrost"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "blockstate_match",
+          "block_state": {
+            "Name": "minecraft:snow",
+            "Properties": {
+              "layers": "1"
+            }
+          }
+        },
+        "state": {
+          "Name": "pseudorygium:permafrost"
+        }
+      },
+      {
+        "target": {
+          "predicate_type": "tag_match",
+          "tag": "c:stones"
+        },
+        "state": {
+          "Name": "pseudorygium:permafrost"
+        }
+      }
+    ]
+  }
+}

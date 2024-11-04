@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_door",
+  "category": "building",
+  "pattern": [
+    "aa",
+    "aa",
+    "aa"
+  ],
+  "key": {
+    "a": {
+      "item": "pseudorygium:ginkgo_planks"
+    }
+  },
+  "result": {
+    "id": "pseudorygium:ginkgo_door",
+    "count": 3
+  }
+}

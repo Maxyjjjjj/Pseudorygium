@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pseudorygium:block/poplar_log_top",
+    "up": "pseudorygium:block/poplar_log_top",
+    "north": "pseudorygium:block/poplar_log",
+    "east": "pseudorygium:block/poplar_log",
+    "south": "pseudorygium:block/poplar_log",
+    "west": "pseudorygium:block/poplar_log",
+    "particle": "pseudorygium:block/poplar_log_top"
+  },
+  "render_type": "solid"
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "experience": 1,
+  "cookingtime": 600,
+  "ingredient": {
+    "item": "pseudorygium:raw_pheasant"
+  },
+  "result": {
+    "id": "pseudorygium:cooked_pheasant"
+  }
+}

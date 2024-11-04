@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#is_jungle",
+  "spawners": {
+    "type": "pseudorygium:sloth",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

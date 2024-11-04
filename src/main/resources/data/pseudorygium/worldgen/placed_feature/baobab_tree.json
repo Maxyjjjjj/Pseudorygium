@@ -1,0 +1,40 @@
+{
+  "feature": "pseudorygium:baobab_tree",
+  "placement": [
+    {
+      "type": "minecraft:count",
+      "count": {
+        "type": "weighted_list",
+        "distribution": [
+          {
+            "data": 2,
+            "weight": 9
+          },
+          {
+            "data": 3,
+            "weight": 1
+          }
+        ]
+      }
+    },
+    {
+      "type": "minecraft:in_square"
+    },
+    {
+      "type": "minecraft:heightmap",
+      "heightmap": "OCEAN_FLOOR"
+    },
+    {
+      "type": "minecraft:biome"
+    },
+    {
+      "type": "minecraft:block_predicate_filter",
+      "predicate": {
+        "type": "minecraft:would_survive",
+        "state": {
+          "Name": "pseudorygium:baobab_sapling"
+        }
+      }
+    }
+  ]
+}

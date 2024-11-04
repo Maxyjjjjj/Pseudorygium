@@ -1,0 +1,10 @@
+{
+  "parent": "block/outer_stairs",
+  "textures": {
+    "particle": "pseudorygium:block/hornbeam_planks",
+    "bottom": "pseudorygium:block/hornbeam_planks",
+    "top": "pseudorygium:block/hornbeam_planks",
+    "side": "pseudorygium:block/hornbeam_planks"
+  },
+  "render_type": "solid"
+}

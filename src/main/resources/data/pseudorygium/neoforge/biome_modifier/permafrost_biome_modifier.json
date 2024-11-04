@@ -1,0 +1,9 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": [
+    "snowy_taiga",
+    "snowy_plains"
+  ],
+  "features": "pseudorygium:permafrost",
+  "step": "underground_ores"
+}

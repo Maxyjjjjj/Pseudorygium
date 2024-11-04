@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:pampas",
+    "sparse_jungle"
+  ],
+  "spawners": {
+    "type": "pseudorygium:anteater",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

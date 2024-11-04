@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:eucalyptus_leaves",
+    "pseudorygium:hornbeam_leaves",
+    "pseudorygium:linden_leaves",
+    "pseudorygium:willow_leaves",
+    "pseudorygium:poplar_leaves",
+    "pseudorygium:baobab_leaves",
+    "pseudorygium:maple_leaves",
+    "pseudorygium:beech_leaves",
+    "pseudorygium:palm_leaves",
+    "pseudorygium:aspen_leaves",
+    "pseudorygium:ginkgo_leaves"
+  ]
+}

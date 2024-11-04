@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "pseudorygium:cold_desert",
+    "pseudorygium:steppe"
+  ],
+  "spawners": {
+    "type": "pseudorygium:sheltopusik",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

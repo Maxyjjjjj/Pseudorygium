@@ -1,0 +1,8 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "particle": "pseudorygium:block/hornbeam_planks",
+    "texture": "pseudorygium:block/hornbeam_planks"
+  },
+  "render_type": "solid"
+}

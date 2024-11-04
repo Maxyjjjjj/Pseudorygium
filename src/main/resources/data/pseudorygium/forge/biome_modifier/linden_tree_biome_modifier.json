@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "pseudorygium:linden_forest",
+  "features": "pseudorygium:linden_tree",
+  "step": "vegetal_decoration"
+}

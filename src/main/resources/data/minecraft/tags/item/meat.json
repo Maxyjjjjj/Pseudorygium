@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:raw_quail",
+    "pseudorygium:cooked_turkey",
+    "pseudorygium:raw_turkey",
+    "pseudorygium:lard",
+    "pseudorygium:cooked_chevon",
+    "pseudorygium:raw_chevon",
+    "pseudorygium:cooked_pheasant",
+    "pseudorygium:raw_pheasant",
+    "pseudorygium:cooked_venison",
+    "pseudorygium:raw_venison"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:hornbeam_door",
+    "pseudorygium:linden_door",
+    "pseudorygium:willow_door",
+    "pseudorygium:poplar_door",
+    "pseudorygium:baobab_door",
+    "pseudorygium:maple_door",
+    "pseudorygium:beech_door",
+    "pseudorygium:palm_door",
+    "pseudorygium:aspen_door",
+    "pseudorygium:ginkgo_door",
+    "pseudorygium:eucalyptus_door"
+  ]
+}

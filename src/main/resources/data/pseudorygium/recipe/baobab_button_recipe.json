@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "wooden_button",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "pseudorygium:baobab_planks"
+    }
+  ],
+  "result": {
+    "id": "pseudorygium:baobab_button",
+    "count": 1
+  }
+}

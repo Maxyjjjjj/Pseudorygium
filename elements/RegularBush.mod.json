@@ -1,0 +1,214 @@
+{
+  "_fv": 69,
+  "_type": "plant",
+  "definition": {
+    "renderType": 120,
+    "texture": "bush",
+    "textureBottom": "",
+    "customModelName": "Cross model",
+    "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "Foliage",
+    "isItemTinted": true,
+    "plantType": "normal",
+    "suspiciousStewEffect": "SPEED",
+    "suspiciousStewDuration": 100,
+    "growapableSpawnType": "Plains",
+    "growapableMaxHeight": 3,
+    "customBoundingBox": false,
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 0.0,
+        "my": 0.0,
+        "mz": 0.0,
+        "Mx": 16.0,
+        "My": 16.0,
+        "Mz": 16.0,
+        "subtract": false
+      }
+    ],
+    "name": "Bush",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [
+      {
+        "value": "DECORATIONS"
+      }
+    ],
+    "hardness": 0.0,
+    "resistance": 0.0,
+    "luminance": 0,
+    "unbreakable": false,
+    "isSolid": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "PLANT"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "useLootTableForDrops": false,
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "forceTicking": false,
+    "emissiveRendering": false,
+    "hasTileEntity": false,
+    "isReplaceable": false,
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "XZ",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 100,
+    "fireSpreadSpeed": 60,
+    "jumpFactor": 1.0,
+    "speedFactor": 1.0,
+    "canBePlacedOn": [
+      {
+        "value": "Blocks.GRASS"
+      },
+      {
+        "value": "Blocks.SAND#0"
+      },
+      {
+        "value": "Blocks.SAND#1"
+      }
+    ],
+    "isBonemealable": false,
+    "frequencyOnChunks": 5,
+    "generateFeature": true,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:AspenForest"
+      },
+      {
+        "value": "CUSTOM:BaobabSavanna"
+      },
+      {
+        "value": "CUSTOM:BeechForest"
+      },
+      {
+        "value": "CUSTOM:ColdDesert"
+      },
+      {
+        "value": "CUSTOM:EucalyptusForest"
+      },
+      {
+        "value": "CUSTOM:GinkgoForest"
+      },
+      {
+        "value": "CUSTOM:HornbeamForest"
+      },
+      {
+        "value": "CUSTOM:LindenForest"
+      },
+      {
+        "value": "CUSTOM:MapleForest"
+      },
+      {
+        "value": "CUSTOM:Outback"
+      },
+      {
+        "value": "CUSTOM:Pampas"
+      },
+      {
+        "value": "CUSTOM:PoplarForest"
+      },
+      {
+        "value": "CUSTOM:Scrub"
+      },
+      {
+        "value": "CUSTOM:Steppe"
+      },
+      {
+        "value": "CUSTOM:SteppeTundra"
+      },
+      {
+        "value": "CUSTOM:Tundra"
+      },
+      {
+        "value": "CUSTOM:WillowSwamp"
+      },
+      {
+        "value": "bamboo_jungle"
+      },
+      {
+        "value": "jungle"
+      },
+      {
+        "value": "jungle_edge"
+      },
+      {
+        "value": "plains"
+      },
+      {
+        "value": "snowy_tundra"
+      },
+      {
+        "value": "mutated_plains"
+      },
+      {
+        "value": "birch_forest"
+      },
+      {
+        "value": "roofed_forest"
+      },
+      {
+        "value": "mutated_forest"
+      },
+      {
+        "value": "forest"
+      },
+      {
+        "value": "mutated_birch_forest"
+      },
+      {
+        "value": "extreme_hills_with_trees"
+      },
+      {
+        "value": "meadow"
+      },
+      {
+        "value": "mutated_extreme_hills"
+      },
+      {
+        "value": "mountains"
+      },
+      {
+        "value": "mutated_savanna"
+      },
+      {
+        "value": "savanna"
+      },
+      {
+        "value": "savanna_rock"
+      },
+      {
+        "value": "cherry_grove"
+      },
+      {
+        "value": "swamp"
+      }
+    ],
+    "generationType": "Flower",
+    "patchSize": 64,
+    "generateAtAnyHeight": true
+  }
+}

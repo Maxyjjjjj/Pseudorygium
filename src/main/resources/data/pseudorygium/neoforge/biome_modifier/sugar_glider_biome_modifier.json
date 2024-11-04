@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "birch_forest",
+    "old_growth_birch_forest"
+  ],
+  "spawners": {
+    "type": "pseudorygium:sugar_glider",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

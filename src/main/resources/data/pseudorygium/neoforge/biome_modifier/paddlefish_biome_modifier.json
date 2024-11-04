@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "river",
+    "ocean"
+  ],
+  "spawners": {
+    "type": "pseudorygium:paddlefish",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

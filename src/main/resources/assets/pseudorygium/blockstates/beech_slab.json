@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "pseudorygium:block/beech_slab"
+    },
+    "type=top": {
+      "model": "pseudorygium:block/beech_slab_top"
+    },
+    "type=double": {
+      "model": "pseudorygium:block/beech_slab_full"
+    }
+  }
+}

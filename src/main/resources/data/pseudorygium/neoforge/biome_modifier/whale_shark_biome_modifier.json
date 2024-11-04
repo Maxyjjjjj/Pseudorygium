@@ -1,0 +1,13 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": [
+    "lukewarm_ocean",
+    "warm_ocean"
+  ],
+  "spawners": {
+    "type": "pseudorygium:whale_shark",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

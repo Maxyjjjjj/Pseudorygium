@@ -1,0 +1,23 @@
+{
+  "display": {
+    "icon": {
+      "id": "pseudorygium:orange"
+    },
+    "title": {
+      "translate": "advancements.trade_with_chimp.title"
+    },
+    "description": {
+      "translate": "advancements.trade_with_chimp.descr"
+    },
+    "frame": "task",
+    "show_toast": true,
+    "announce_to_chat": true,
+    "hidden": false
+  },
+  "criteria": {
+    "trade_with_chimp_0": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "parent": "minecraft:adventure/trade"
+}

@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "#pseudorygium:temperate_and_cold_biomes",
+  "spawners": {
+    "type": "pseudorygium:hare",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

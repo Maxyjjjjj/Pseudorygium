@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:deepslate_cobalt_ore",
+    "pseudorygium:cobalt_block",
+    "pseudorygium:cobalt_ore",
+    "pseudorygium:raw_silver_block",
+    "pseudorygium:deepslate_silver_ore",
+    "pseudorygium:silver_block",
+    "pseudorygium:silver_ore",
+    "pseudorygium:permafrost"
+  ]
+}

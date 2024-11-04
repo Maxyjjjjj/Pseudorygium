@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "pseudorygium:pampas",
+  "spawners": {
+    "type": "pseudorygium:rhea",
+    "weight": 20,
+    "minCount": 4,
+    "maxCount": 4
+  }
+}

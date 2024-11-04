@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "pseudorygium:lavender_fields",
+  "features": "pseudorygium:oak_tree_custom",
+  "step": "surface_structures"
+}

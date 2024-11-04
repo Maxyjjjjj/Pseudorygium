@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_spawns",
+  "biomes": "pseudorygium:outback",
+  "spawners": {
+    "type": "pseudorygium:marsupial_lion",
+    "weight": 20,
+    "minCount": 1,
+    "maxCount": 1
+  }
+}

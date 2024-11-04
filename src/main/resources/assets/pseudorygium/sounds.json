@@ -1,0 +1,412 @@
+{
+  "entity.zebra.ambient": {
+    "sounds": [
+      {
+        "name": "pseudorygium:zebra_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:zebra_ambient_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.deer.amibent": {
+    "sounds": [
+      {
+        "name": "pseudorygium:deer_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:deer_ambient_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:deer_ambient_3",
+        "stream": false
+      }
+    ]
+  },
+  "entity.deer.hurt": {
+    "sounds": [
+      {
+        "name": "pseudorygium:deer_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "entity.deer.death": {
+    "sounds": [
+      {
+        "name": "pseudorygium:deer_death",
+        "stream": false
+      }
+    ]
+  },
+  "entity.elephant.ambient": {
+    "subtitle": "subtitles.entity.elephant.ambient",
+    "sounds": [
+      {
+        "name": "pseudorygium:elephant_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:elephant_ambient_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:elephant_ambient_3",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:elephant_ambient_4",
+        "stream": false
+      }
+    ]
+  },
+  "entity.elephant.hurt": {
+    "subtitle": "subtitles.entity.elephant.hurt",
+    "sounds": [
+      {
+        "name": "pseudorygium:elephant_hurt_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:elephant_hurt_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:elephant_hurt_3",
+        "stream": false
+      }
+    ]
+  },
+  "entity.elephant.death": {
+    "sounds": [
+      {
+        "name": "pseudorygium:elephant_death_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:elephant_death_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.tiger.hurt": {
+    "subtitle": "subtitles.entity.tiger.hurt",
+    "sounds": [
+      {
+        "name": "pseudorygium:tiger_hurt_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:tiger_hurt_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.lion.death": {
+    "subtitle": "subtitles.entity.lion.death",
+    "sounds": [
+      {
+        "name": "pseudorygium:lion_death",
+        "stream": false
+      }
+    ]
+  },
+  "entity.chimpanzee.ambient": {
+    "subtitle": "subtitles.entity.chimpanzee.ambient",
+    "sounds": [
+      {
+        "name": "pseudorygium:chimpanzee_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:chimpanzee_ambient_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:chimpanzee_ambient_3",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:chimpanzee_ambient_4",
+        "stream": false
+      }
+    ]
+  },
+  "entity.chimpanzee.step": {
+    "sounds": [
+      {
+        "name": "pseudorygium:chimpanzee_step_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:chimpanzee_step_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.chimpanzee.hurt": {
+    "subtitle": "subtitles.entity.chimpanzee.hurt",
+    "sounds": [
+      {
+        "name": "pseudorygium:chimpanzee_hurt_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:chimpanzee_hurt_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.chimpanzee.death": {
+    "subtitle": "subtitles.entity.chimpanzee.death",
+    "sounds": [
+      {
+        "name": "pseudorygium:chimpanzee_death",
+        "stream": false
+      }
+    ]
+  },
+  "entity.capybara.ambient": {
+    "sounds": [
+      {
+        "name": "pseudorygium:capybara_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:capybara_ambient_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.capybara.hurt": {
+    "sounds": [
+      {
+        "name": "pseudorygium:capybara_hurt",
+        "stream": false
+      }
+    ]
+  },
+  "entity.capybara.death": {
+    "sounds": [
+      {
+        "name": "pseudorygium:capybara_death",
+        "stream": false
+      }
+    ]
+  },
+  "entity.ostrich.ambient": {
+    "subtitle": "subtitles.entity.ostrich.ambient",
+    "sounds": [
+      {
+        "name": "pseudorygium:ostrich_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:ostrich_ambient_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:ostrich_ambient_3",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:ostrich_ambient_4",
+        "stream": false
+      }
+    ]
+  },
+  "entity.ostrich.hurt": {
+    "subtitle": "subtitles.entity.ostrich.hurt",
+    "sounds": [
+      {
+        "name": "pseudorygium:ostrich_hurt_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:ostrich_hurt_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.racoon.ambient": {
+    "subtitle": "subtitles.entity.racoon.ambient",
+    "sounds": [
+      {
+        "name": "pseudorygium:racoon_ambient",
+        "stream": false
+      }
+    ]
+  },
+  "entity.hippopotamus.ambient": {
+    "subtitle": "subtitles.entity.hippopotamus.ambient",
+    "sounds": [
+      {
+        "name": "pseudorygium:hippo_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:hippo_ambient_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.owl.ambient": {
+    "sounds": [
+      {
+        "name": "pseudorygium:owl_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:owl_ambient_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:owl_ambient_3",
+        "stream": false
+      }
+    ]
+  },
+  "entity.capercaillie.ambient": {
+    "subtitle": "subtitles.entity.capercaillie.ambient",
+    "sounds": [
+      {
+        "name": "pseudorygium:capercaillie_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:capercaillie_ambient_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:capercaillie_ambient_3",
+        "stream": false
+      }
+    ]
+  },
+  "entity.capercaillie.hurt": {
+    "subtitle": "subtitles.entity.capercaillie.hurt",
+    "sounds": [
+      {
+        "name": "pseudorygium:capercaillie_hurt_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:capercaillie_hurt_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:capercaillie_hurt_3",
+        "stream": false
+      }
+    ]
+  },
+  "entity.capercaillie.death": {
+    "subtitle": "subtitles.entity.capercaillie.death",
+    "sounds": [
+      {
+        "name": "pseudorygium:capercaillie_death",
+        "stream": false
+      }
+    ]
+  },
+  "item.morin_khuur.jukebox": {
+    "sounds": [
+      {
+        "name": "pseudorygium:morin_khuur_jukebox",
+        "stream": true
+      }
+    ]
+  },
+  "item.morin_khuur.play": {
+    "sounds": [
+      {
+        "name": "pseudorygium:morinkhuur_play_3",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:morinkhuur_play_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:morinkhuur_play_1",
+        "stream": false
+      }
+    ]
+  },
+  "entity.snow_leopard.ambient": {
+    "sounds": [
+      {
+        "name": "pseudorygium:snow_leopard_idle_0",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:snow_leopard_idle_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:snow_leopard_idle_2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.tiger.ambient": {
+    "sounds": [
+      {
+        "name": "pseudorygium:tiger_idle_0",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:tiger_idle_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:tiger_idle_2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:tiger_idle_3",
+        "stream": false
+      }
+    ]
+  },
+  "entity.lion.ambient": {
+    "sounds": [
+      {
+        "name": "pseudorygium:lion_idle1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:lion_idle2",
+        "stream": false
+      }
+    ]
+  },
+  "entity.lion.hurt": {
+    "sounds": [
+      {
+        "name": "pseudorygium:lion_hurt1",
+        "stream": false
+      }
+    ]
+  },
+  "entity.snow_leopard.hurt": {
+    "sounds": [
+      {
+        "name": "pseudorygium:snow_leopard_hurt_0",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:snow_leopard_hurt_1",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:snow_leopard_hurt_2",
+        "stream": false
+      }
+    ]
+  }
+}

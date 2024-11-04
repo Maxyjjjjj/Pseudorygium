@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "wooden_slab",
+  "category": "building",
+  "pattern": [
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "pseudorygium:willow_planks"
+    }
+  },
+  "result": {
+    "id": "pseudorygium:willow_slab",
+    "count": 6
+  }
+}

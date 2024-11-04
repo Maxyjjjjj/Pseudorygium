@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:eucalyptus_fence",
+    "pseudorygium:ginkgo_fence",
+    "pseudorygium:aspen_fence",
+    "pseudorygium:palm_fence",
+    "pseudorygium:beech_fence",
+    "pseudorygium:maple_fence",
+    "pseudorygium:baobab_fence",
+    "pseudorygium:poplar_fence",
+    "pseudorygium:willow_fence",
+    "pseudorygium:linden_fence",
+    "pseudorygium:hornbeam_fence"
+  ]
+}
