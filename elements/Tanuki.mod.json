@@ -37,7 +37,7 @@
     },
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:PseudorygiumAnimals"
       }
     ],
     "isBoss": false,
@@ -114,6 +114,9 @@
       "value": "entity.fox.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "entityDataEntries": [],

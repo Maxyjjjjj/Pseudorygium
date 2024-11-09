@@ -44,7 +44,7 @@
     },
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:PseudorygiumAnimals"
       }
     ],
     "isBoss": false,
@@ -122,6 +122,9 @@
     },
     "stepSound": {
       "value": "entity.polar_bear.step"
+    },
+    "raidCelebrationSound": {
+      "value": ""
     },
     "entityDataEntries": [],
     "hasAI": true,

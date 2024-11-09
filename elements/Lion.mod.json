@@ -56,7 +56,7 @@
     },
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:PseudorygiumAnimals"
       }
     ],
     "isBoss": false,
@@ -133,6 +133,9 @@
       "value": "CUSTOM:entity.lion.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "entityDataEntries": [

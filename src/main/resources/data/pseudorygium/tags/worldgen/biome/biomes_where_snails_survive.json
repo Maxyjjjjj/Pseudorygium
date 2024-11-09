@@ -17,8 +17,13 @@
     "pseudorygium:pampas",
     "pseudorygium:poplar_forest",
     "pseudorygium:scrub",
-    "pseudorygium:cold_desert",
     "pseudorygium:maple_forest",
-    "pseudorygium:baobab_savanna"
+    "pseudorygium:baobab_savanna",
+    "pseudorygium:aspen_forest",
+    "pseudorygium:beech_forest",
+    "pseudorygium:eucalyptus_forest",
+    "pseudorygium:ginkgo_forest",
+    "pseudorygium:lavender_fields",
+    "pseudorygium:linden_forest"
   ]
 }

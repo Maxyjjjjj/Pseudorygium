@@ -1,0 +1,11 @@
+{
+  "_fv": 69,
+  "_type": "tab",
+  "definition": {
+    "name": "Pseudorygium Animals",
+    "icon": {
+      "value": "CUSTOM:Saola.spawn_egg"
+    },
+    "showSearch": true
+  }
+}

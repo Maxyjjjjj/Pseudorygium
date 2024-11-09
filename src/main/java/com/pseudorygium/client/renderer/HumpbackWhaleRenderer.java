@@ -15,6 +15,6 @@ public class HumpbackWhaleRenderer extends MobRenderer<HumpbackWhaleEntity, Mode
 
 	@Override
 	public ResourceLocation getTextureLocation(HumpbackWhaleEntity entity) {
-		return ResourceLocation.parse("pseudorygium:textures/entities/humpback_whale.png");
+		return ResourceLocation.parse("pseudorygium:textures/entities/humpback.png");
 	}
 }

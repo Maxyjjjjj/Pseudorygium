@@ -1,0 +1,6 @@
+{
+  "type": "neoforge:add_features",
+  "biomes": "beach",
+  "features": "pseudorygium:quicksand_pit",
+  "step": "lakes"
+}

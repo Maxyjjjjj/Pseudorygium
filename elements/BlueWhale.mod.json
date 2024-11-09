@@ -105,7 +105,7 @@
       "value": ""
     },
     "livingSound": {
-      "value": ""
+      "value": "CUSTOM:entity.whale.ambient"
     },
     "hurtSound": {
       "value": "entity.generic.hurt"
@@ -114,6 +114,9 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "entityDataEntries": [],

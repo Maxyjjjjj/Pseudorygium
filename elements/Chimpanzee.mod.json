@@ -37,7 +37,7 @@
     },
     "creativeTabs": [
       {
-        "value": "MISC"
+        "value": "CUSTOM:PseudorygiumAnimals"
       }
     ],
     "isBoss": false,
@@ -115,6 +115,9 @@
     },
     "stepSound": {
       "value": "CUSTOM:entity.chimpanzee.step"
+    },
+    "raidCelebrationSound": {
+      "value": ""
     },
     "entityDataEntries": [],
     "onRightClickedOn": {

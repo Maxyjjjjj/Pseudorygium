@@ -14,6 +14,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.DoubleHighBlockItem;
 import net.minecraft.world.item.BlockItem;
 
+import com.pseudorygium.item.TomatoSeedsItem;
+import com.pseudorygium.item.TomatoItem;
 import com.pseudorygium.item.SunflowerSeedsItem;
 import com.pseudorygium.item.StrawberryItem;
 import com.pseudorygium.item.SilverNuggetItem;
@@ -32,7 +34,10 @@ import com.pseudorygium.item.PearlItem;
 import com.pseudorygium.item.OrangeItem;
 import com.pseudorygium.item.OpenCoconutItem;
 import com.pseudorygium.item.NetheriteKatanaItem;
+import com.pseudorygium.item.MorinKhuurItem;
 import com.pseudorygium.item.MapleSyrupBottleItem;
+import com.pseudorygium.item.MaizeSeedsItem;
+import com.pseudorygium.item.MaizeItem;
 import com.pseudorygium.item.LemmingHideItem;
 import com.pseudorygium.item.LeafItem;
 import com.pseudorygium.item.LeafCrownItem;
@@ -149,7 +154,7 @@ public class PseudorygiumModItems {
 	public static final DeferredItem<Item> HUMMINGBIRD_SPAWN_EGG = REGISTRY.register("hummingbird_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.HUMMINGBIRD, -16711936, -65536, new Item.Properties()));
 	public static final DeferredItem<Item> VENUS_FLYTRAP = block(PseudorygiumModBlocks.VENUS_FLYTRAP);
 	public static final DeferredItem<Item> LEMMING_HIDE = REGISTRY.register("lemming_hide", LemmingHideItem::new);
-	public static final DeferredItem<Item> SECRETARYBIRD_SPAWN_EGG = REGISTRY.register("secretarybird_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.SECRETARYBIRD, -1, -3355444, new Item.Properties()));
+	public static final DeferredItem<Item> SECRETARYBIRD_SPAWN_EGG = REGISTRY.register("secretarybird_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.SECRETARYBIRD, -6967622, -3355444, new Item.Properties()));
 	public static final DeferredItem<Item> RAW_CHEVON = REGISTRY.register("raw_chevon", RawChevonItem::new);
 	public static final DeferredItem<Item> COOKED_CHEVON = REGISTRY.register("cooked_chevon", CookedChevonItem::new);
 	public static final DeferredItem<Item> MOOSE_SPAWN_EGG = REGISTRY.register("moose_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.MOOSE, -11254224, -1, new Item.Properties()));
@@ -334,7 +339,7 @@ public class PseudorygiumModItems {
 	public static final DeferredItem<Item> SAWFISH_SPAWN_EGG = REGISTRY.register("sawfish_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.SAWFISH, -1, -16737895, new Item.Properties()));
 	public static final DeferredItem<Item> WHITE_SHARK_SPAWN_EGG = REGISTRY.register("white_shark_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.WHITE_SHARK, -3355444, -13434880, new Item.Properties()));
 	public static final DeferredItem<Item> PADDLEFISH_SPAWN_EGG = REGISTRY.register("paddlefish_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.PADDLEFISH, -1, -10092442, new Item.Properties()));
-	public static final DeferredItem<Item> HUMPBACK_WHALE_SPAWN_EGG = REGISTRY.register("humpback_whale_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.HUMPBACK_WHALE, -16777114, -6710785, new Item.Properties()));
+	public static final DeferredItem<Item> HUMPBACK_WHALE_SPAWN_EGG = REGISTRY.register("humpback_whale_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.HUMPBACK_WHALE, -13948111, -1907998, new Item.Properties()));
 	public static final DeferredItem<Item> FIDDLER_CRAB_SPAWN_EGG = REGISTRY.register("fiddler_crab_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.FIDDLER_CRAB, -6750055, -26368, new Item.Properties()));
 	public static final DeferredItem<Item> SWAN_SPAWN_EGG = REGISTRY.register("swan_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.SWAN, -6711040, -52429, new Item.Properties()));
 	public static final DeferredItem<Item> TARSIER_SPAWN_EGG = REGISTRY.register("tarsier_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.TARSIER, -52225, -10066330, new Item.Properties()));
@@ -549,6 +554,11 @@ public class PseudorygiumModItems {
 	public static final DeferredItem<Item> QUICKSAND_BUCKET = REGISTRY.register("quicksand_bucket", QuicksandBucketItem::new);
 	public static final DeferredItem<Item> QUICKSAND = block(PseudorygiumModBlocks.QUICKSAND);
 	public static final DeferredItem<Item> HARE_SPAWN_EGG = REGISTRY.register("hare_spawn_egg", () -> new DeferredSpawnEggItem(PseudorygiumModEntities.HARE, -6652834, -1, new Item.Properties()));
+	public static final DeferredItem<Item> TOMATO = REGISTRY.register("tomato", TomatoItem::new);
+	public static final DeferredItem<Item> TOMATO_SEEDS = REGISTRY.register("tomato_seeds", TomatoSeedsItem::new);
+	public static final DeferredItem<Item> MAIZE = REGISTRY.register("maize", MaizeItem::new);
+	public static final DeferredItem<Item> MAIZE_SEEDS = REGISTRY.register("maize_seeds", MaizeSeedsItem::new);
+	public static final DeferredItem<Item> MORIN_KHUUR = REGISTRY.register("morin_khuur", MorinKhuurItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

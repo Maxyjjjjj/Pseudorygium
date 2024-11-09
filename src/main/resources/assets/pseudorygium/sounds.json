@@ -408,5 +408,17 @@
         "stream": false
       }
     ]
+  },
+  "entity.whale.ambient": {
+    "sounds": [
+      {
+        "name": "pseudorygium:whale_ambient2",
+        "stream": false
+      },
+      {
+        "name": "pseudorygium:whale_ambient1",
+        "stream": false
+      }
+    ]
   }
 }

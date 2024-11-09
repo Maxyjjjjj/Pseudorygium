@@ -963,7 +963,7 @@ public class PseudorygiumModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<HumpbackWhaleEntity>> HUMPBACK_WHALE = register("humpback_whale",
 			EntityType.Builder.<HumpbackWhaleEntity>of(HumpbackWhaleEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
-					.sized(3f, 3f));
+					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<FiddlerCrabEntity>> FIDDLER_CRAB = register("fiddler_crab",
 			EntityType.Builder.<FiddlerCrabEntity>of(FiddlerCrabEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 

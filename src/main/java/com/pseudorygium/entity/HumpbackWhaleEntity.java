@@ -90,6 +90,11 @@ public class HumpbackWhaleEntity extends Animal {
 	}
 
 	@Override
+	public SoundEvent getAmbientSound() {
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("pseudorygium:entity.whale.ambient"));
+	}
+
+	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
 		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
 	}

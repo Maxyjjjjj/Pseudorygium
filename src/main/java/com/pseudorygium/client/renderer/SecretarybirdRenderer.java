@@ -15,6 +15,6 @@ public class SecretarybirdRenderer extends MobRenderer<SecretarybirdEntity, Mode
 
 	@Override
 	public ResourceLocation getTextureLocation(SecretarybirdEntity entity) {
-		return ResourceLocation.parse("pseudorygium:textures/entities/secretarybird.png");
+		return ResourceLocation.parse("pseudorygium:textures/entities/secretary_bird.png");
 	}
 }

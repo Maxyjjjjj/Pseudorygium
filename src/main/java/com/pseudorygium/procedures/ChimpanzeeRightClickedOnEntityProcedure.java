@@ -16,7 +16,6 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.advancements.AdvancementProgress;
 import net.minecraft.advancements.AdvancementHolder;
 
@@ -190,9 +189,6 @@ public class ChimpanzeeRightClickedOnEntityProcedure {
 							}
 						}
 					});
-				} else {
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.SMOKE, x, y, z, 5, 3, 3, 3, 1);
 				}
 			}
 		}

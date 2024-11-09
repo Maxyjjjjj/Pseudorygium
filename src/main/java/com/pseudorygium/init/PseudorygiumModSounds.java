@@ -64,4 +64,5 @@ public class PseudorygiumModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> ENTITY_LION_HURT = REGISTRY.register("entity.lion.hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("pseudorygium", "entity.lion.hurt")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> ENTITY_SNOW_LEOPARD_HURT = REGISTRY.register("entity.snow_leopard.hurt",
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("pseudorygium", "entity.snow_leopard.hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> ENTITY_WHALE_AMBIENT = REGISTRY.register("entity.whale.ambient", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("pseudorygium", "entity.whale.ambient")));
 }
