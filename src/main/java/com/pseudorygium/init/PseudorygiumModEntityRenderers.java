@@ -222,7 +222,6 @@ import com.pseudorygium.client.renderer.CorsacFoxRenderer;
 import com.pseudorygium.client.renderer.CoralSnakeRenderer;
 import com.pseudorygium.client.renderer.CobraRenderer;
 import com.pseudorygium.client.renderer.CloudedLeopardRenderer;
-import com.pseudorygium.client.renderer.ClamRenderer;
 import com.pseudorygium.client.renderer.ChiruRenderer;
 import com.pseudorygium.client.renderer.ChimpanzeeRenderer;
 import com.pseudorygium.client.renderer.CheetahRenderer;
@@ -244,6 +243,7 @@ import com.pseudorygium.client.renderer.ButterflyRenderer;
 import com.pseudorygium.client.renderer.BullfinchRenderer;
 import com.pseudorygium.client.renderer.BuffaloRenderer;
 import com.pseudorygium.client.renderer.BrownBearRenderer;
+import com.pseudorygium.client.renderer.BoomerangProjectileRenderer;
 import com.pseudorygium.client.renderer.BoobyRenderer;
 import com.pseudorygium.client.renderer.BongoRenderer;
 import com.pseudorygium.client.renderer.BlueWhaleRenderer;
@@ -377,7 +377,6 @@ public class PseudorygiumModEntityRenderers {
 		event.registerEntityRenderer(PseudorygiumModEntities.BONGO.get(), BongoRenderer::new);
 		event.registerEntityRenderer(PseudorygiumModEntities.CATERPILLAR.get(), CaterpillarRenderer::new);
 		event.registerEntityRenderer(PseudorygiumModEntities.OCTOPUS.get(), OctopusRenderer::new);
-		event.registerEntityRenderer(PseudorygiumModEntities.CLAM.get(), ClamRenderer::new);
 		event.registerEntityRenderer(PseudorygiumModEntities.APHID.get(), AphidRenderer::new);
 		event.registerEntityRenderer(PseudorygiumModEntities.JUMPING_SPIDER.get(), JumpingSpiderRenderer::new);
 		event.registerEntityRenderer(PseudorygiumModEntities.LADYBUG.get(), LadybugRenderer::new);
@@ -528,5 +527,6 @@ public class PseudorygiumModEntityRenderers {
 		event.registerEntityRenderer(PseudorygiumModEntities.CANARY.get(), CanaryRenderer::new);
 		event.registerEntityRenderer(PseudorygiumModEntities.KOALA.get(), KoalaRenderer::new);
 		event.registerEntityRenderer(PseudorygiumModEntities.HARE.get(), HareRenderer::new);
+		event.registerEntityRenderer(PseudorygiumModEntities.BOOMERANG_PROJECTILE.get(), BoomerangProjectileRenderer::new);
 	}
 }

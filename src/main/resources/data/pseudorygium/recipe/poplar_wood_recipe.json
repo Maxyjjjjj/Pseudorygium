@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:poplar_log"
-    }
+    "a": "pseudorygium:poplar_log"
   },
   "result": {
     "id": "pseudorygium:poplar_wood",

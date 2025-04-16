@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class CloudedLeopardRenderer extends MobRenderer<CloudedLeopardEntity, LivingEntityRenderState, Modelclouded_leopard> {
+	private CloudedLeopardEntity entity = null;
 
-import com.pseudorygium.entity.CloudedLeopardEntity;
-import com.pseudorygium.client.model.Modelclouded_leopard;
-
-public class CloudedLeopardRenderer extends MobRenderer<CloudedLeopardEntity, Modelclouded_leopard<CloudedLeopardEntity>> {
 	public CloudedLeopardRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelclouded_leopard(context.bakeLayer(Modelclouded_leopard.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(CloudedLeopardEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(CloudedLeopardEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/cloudedleopard.png");
 	}
 }

@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class SalamanderRenderer extends MobRenderer<SalamanderEntity, LivingEntityRenderState, Modelsalamander> {
+	private SalamanderEntity entity = null;
 
-import com.pseudorygium.entity.SalamanderEntity;
-import com.pseudorygium.client.model.Modelsalamander;
-
-public class SalamanderRenderer extends MobRenderer<SalamanderEntity, Modelsalamander<SalamanderEntity>> {
 	public SalamanderRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelsalamander(context.bakeLayer(Modelsalamander.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SalamanderEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(SalamanderEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/salamander.png");
 	}
 }

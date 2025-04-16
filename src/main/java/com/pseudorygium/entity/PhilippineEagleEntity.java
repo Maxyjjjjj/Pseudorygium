@@ -1,53 +1,18 @@
 
 package com.pseudorygium.entity;
 
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
-
-import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.levelgen.Heightmap;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.Level;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.animal.frog.Frog;
-import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.entity.ai.navigation.PathNavigation;
-import net.minecraft.world.entity.ai.navigation.FlyingPathNavigation;
-import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
-import net.minecraft.world.entity.ai.goal.target.HurtByTargetGoal;
-import net.minecraft.world.entity.ai.goal.RandomStrollGoal;
-import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
-import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
-import net.minecraft.world.entity.ai.goal.Goal;
-import net.minecraft.world.entity.ai.goal.FloatGoal;
-import net.minecraft.world.entity.ai.control.FlyingMoveControl;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.RandomSource;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.sounds.SoundEvent;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.BlockPos;
-
-import java.util.EnumSet;
-
-import com.pseudorygium.init.PseudorygiumModEntities;
+import net.minecraft.nbt.Tag;
+import net.minecraft.network.syncher.EntityDataAccessor;
 
 public class PhilippineEagleEntity extends Animal {
+
 	public PhilippineEagleEntity(EntityType<PhilippineEagleEntity> type, Level world) {
 		super(type, world);
 		xpReward = 0;
 		setNoAi(false);
+
 		this.moveControl = new FlyingMoveControl(this, 10, true);
+
 	}
 
 	@Override
@@ -58,11 +23,14 @@ public class PhilippineEagleEntity extends Animal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
+
 		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
+
 		});
 		this.goalSelector.addGoal(2, new Goal() {
 			{
@@ -93,7 +61,7 @@ public class PhilippineEagleEntity extends Animal {
 			public void tick() {
 				LivingEntity livingentity = PhilippineEagleEntity.this.getTarget();
 				if (PhilippineEagleEntity.this.getBoundingBox().intersects(livingentity.getBoundingBox())) {
-					PhilippineEagleEntity.this.doHurtTarget(livingentity);
+					PhilippineEagleEntity.this.doHurtTarget(this.getServerLevel(livingentity), livingentity);
 				} else {
 					double d0 = PhilippineEagleEntity.this.distanceToSqr(livingentity);
 					if (d0 < 16) {
@@ -104,6 +72,7 @@ public class PhilippineEagleEntity extends Animal {
 			}
 		});
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8, 20) {
+
 			@Override
 			protected Vec3 getPosition() {
 				RandomSource random = PhilippineEagleEntity.this.getRandom();
@@ -112,6 +81,7 @@ public class PhilippineEagleEntity extends Animal {
 				double dir_z = PhilippineEagleEntity.this.getZ() + ((random.nextFloat() * 2 - 1) * 16);
 				return new Vec3(dir_x, dir_y, dir_z);
 			}
+
 		});
 		this.targetSelector.addGoal(4, new NearestAttackableTargetGoal(this, SnakeEntity.class, false, false));
 		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, MonkeyEntity.class, false, false));
@@ -119,32 +89,34 @@ public class PhilippineEagleEntity extends Animal {
 		this.targetSelector.addGoal(7, new HurtByTargetGoal(this));
 		this.goalSelector.addGoal(8, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(9, new FloatGoal(this));
+
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.parrot.ambient"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.parrot.ambient"));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.parrot.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.parrot.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.parrot.death"));
+		return BuiltInRegistries.SOUND_EVENT.getValue(ResourceLocation.parse("entity.parrot.death"));
 	}
 
 	@Override
 	public boolean causeFallDamage(float l, float d, DamageSource source) {
+
 		return false;
 	}
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		PhilippineEagleEntity retval = PseudorygiumModEntities.PHILIPPINE_EAGLE.get().create(serverWorld);
-		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null);
+		PhilippineEagleEntity retval = PseudorygiumModEntities.PHILIPPINE_EAGLE.get().create(serverWorld, EntitySpawnReason.BREEDING);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), EntitySpawnReason.BREEDING, null);
 		return retval;
 	}
 
@@ -164,6 +136,7 @@ public class PhilippineEagleEntity extends Animal {
 
 	public void aiStep() {
 		super.aiStep();
+
 		this.setNoGravity(true);
 	}
 
@@ -179,8 +152,12 @@ public class PhilippineEagleEntity extends Animal {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 7);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
+
 		return builder;
 	}
+
 }

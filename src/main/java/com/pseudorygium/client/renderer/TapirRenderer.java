@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class TapirRenderer extends MobRenderer<TapirEntity, LivingEntityRenderState, Modeltapir> {
+	private TapirEntity entity = null;
 
-import com.pseudorygium.entity.TapirEntity;
-import com.pseudorygium.client.model.Modeltapir;
-
-public class TapirRenderer extends MobRenderer<TapirEntity, Modeltapir<TapirEntity>> {
 	public TapirRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modeltapir(context.bakeLayer(Modeltapir.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(TapirEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(TapirEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/tapir.png");
 	}
 }

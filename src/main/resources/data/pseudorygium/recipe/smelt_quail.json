@@ -3,9 +3,7 @@
   "category": "food",
   "experience": 1,
   "cookingtime": 600,
-  "ingredient": {
-    "item": "pseudorygium:raw_quail"
-  },
+  "ingredient": "pseudorygium:raw_quail",
   "result": {
     "id": "pseudorygium:cooked_quail"
   }

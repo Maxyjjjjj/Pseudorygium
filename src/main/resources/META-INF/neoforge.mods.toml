@@ -15,18 +15,18 @@ authors="Yumithirritj"
 # End of user code block mod configuration
 
 [[dependencies.pseudorygium]]
-modId="neoforge"
-type="required"
-versionRange="[21.1.65,)"
-ordering="AFTER"
-side="BOTH"
+    modId="neoforge"
+    type="required"
+    versionRange="[21.4.123,)"
+    ordering="AFTER"
+    side="BOTH"
 
 [[dependencies.pseudorygium]]
-modId="minecraft"
-type="required"
-versionRange="[1.21.1]"
-ordering="AFTER"
-side="BOTH"
+    modId="minecraft"
+    type="required"
+    versionRange="[1.21.4]"
+    ordering="AFTER"
+    side="BOTH"
 
 
 

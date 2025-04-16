@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class StagBeetleRenderer extends MobRenderer<StagBeetleEntity, LivingEntityRenderState, Modelstag_beetle> {
+	private StagBeetleEntity entity = null;
 
-import com.pseudorygium.entity.StagBeetleEntity;
-import com.pseudorygium.client.model.Modelstag_beetle;
-
-public class StagBeetleRenderer extends MobRenderer<StagBeetleEntity, Modelstag_beetle<StagBeetleEntity>> {
 	public StagBeetleRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelstag_beetle(context.bakeLayer(Modelstag_beetle.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(StagBeetleEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(StagBeetleEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/stag_beetle.png");
 	}
 }

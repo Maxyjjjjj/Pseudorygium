@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "half=upper": {
+      "model": "pseudorygium:block/maize_crop"
+    },
+    "half=lower": {
+      "model": "pseudorygium:block/maize_crop_bottom"
+    }
+  }
+}

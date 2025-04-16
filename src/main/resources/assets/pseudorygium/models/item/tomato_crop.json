@@ -1,0 +1,6 @@
+{
+  "parent": "item/handheld",
+  "textures": {
+    "layer0": "pseudorygium:block/tomatoes_stage7"
+  }
+}

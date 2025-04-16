@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class PythonRenderer extends MobRenderer<PythonEntity, LivingEntityRenderState, Modelpython> {
+	private PythonEntity entity = null;
 
-import com.pseudorygium.entity.PythonEntity;
-import com.pseudorygium.client.model.Modelpython;
-
-public class PythonRenderer extends MobRenderer<PythonEntity, Modelpython<PythonEntity>> {
 	public PythonRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelpython(context.bakeLayer(Modelpython.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(PythonEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(PythonEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/python.png");
 	}
 }

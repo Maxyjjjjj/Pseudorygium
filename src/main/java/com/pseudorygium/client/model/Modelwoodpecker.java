@@ -1,8 +1,8 @@
 package com.pseudorygium.client.model;
 
-import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
@@ -13,65 +13,57 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.EntityModel;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
-// Made with Blockbench 4.9.3
+// Made with Blockbench 4.11.2
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelwoodpecker<T extends Entity> extends EntityModel<T> {
+public class Modelwoodpecker extends EntityModel<LivingEntityRenderState> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("pseudorygium", "modelwoodpecker"), "main");
-	public final ModelPart Body;
-	public final ModelPart LeftLeg;
-	public final ModelPart RightLeg;
-	public final ModelPart LeftWing;
-	public final ModelPart RightWing;
+	public final ModelPart body;
+	public final ModelPart head;
+	public final ModelPart tail;
+	public final ModelPart wingleft;
+	public final ModelPart wingright;
+	public final ModelPart legleft;
+	public final ModelPart legleft2;
 
 	public Modelwoodpecker(ModelPart root) {
-		this.Body = root.getChild("Body");
-		this.LeftLeg = root.getChild("LeftLeg");
-		this.RightLeg = root.getChild("RightLeg");
-		this.LeftWing = root.getChild("LeftWing");
-		this.RightWing = root.getChild("RightWing");
+		super(root);
+		this.body = root.getChild("body");
+		this.head = this.body.getChild("head");
+		this.tail = this.body.getChild("tail");
+		this.wingleft = root.getChild("wingleft");
+		this.wingright = root.getChild("wingright");
+		this.legleft = root.getChild("legleft");
+		this.legleft2 = root.getChild("legleft2");
 	}
 
 	public static LayerDefinition createBodyLayer() {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
-		PartDefinition Body = partdefinition.addOrReplaceChild("Body", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, -11.0F, -1.0F, 5.0F, 8.0F, 5.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(1.5F, 24.0F, 0.0F, 0.2618F, 0.0F, 0.0F));
-		PartDefinition Neck = Body.addOrReplaceChild("Neck", CubeListBuilder.create().texOffs(20, 0).addBox(-3.0F, -14.0F, -3.0F, 3.0F, 4.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, 0.0F));
-		PartDefinition Head = Neck.addOrReplaceChild("Head", CubeListBuilder.create().texOffs(0, 13).addBox(-4.0F, -17.0F, -3.0F, 5.0F, 4.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0873F, 0.0F, 0.0F));
-		PartDefinition Hair = Head.addOrReplaceChild("Hair", CubeListBuilder.create().texOffs(22, 25).addBox(-2.0F, -19.0F, 0.0F, 1.0F, 3.0F, 5.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition Beak = Head.addOrReplaceChild("Beak", CubeListBuilder.create().texOffs(22, 14).addBox(-2.0F, -14.0F, -9.0F, 1.0F, 1.0F, 7.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition Tail = Body.addOrReplaceChild("Tail", CubeListBuilder.create(), PartPose.offset(0.0F, 0.0F, 0.0F));
-		PartDefinition Tail_r1 = Tail.addOrReplaceChild("Tail_r1", CubeListBuilder.create().texOffs(15, 7).addBox(-3.0F, -6.0F, -1.0F, 3.0F, 1.0F, 6.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.6109F, 0.0F, 0.0F));
-		PartDefinition LeftLeg = partdefinition.addOrReplaceChild("LeftLeg", CubeListBuilder.create(), PartPose.offsetAndRotation(1.5F, 20.0F, -1.0F, 0.2182F, 0.0F, 0.0F));
-		PartDefinition LeftLeg_r1 = LeftLeg.addOrReplaceChild("LeftLeg_r1", CubeListBuilder.create().texOffs(0, 13).addBox(0.0F, -4.0F, -1.0F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(0.0F, 4.0F, 0.0F, -0.2182F, 0.0F, 0.0F));
-		PartDefinition RightLeg = partdefinition.addOrReplaceChild("RightLeg", CubeListBuilder.create().texOffs(0, 0).addBox(-4.0F, 0.0F, -1.0F, 1.0F, 4.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(1.5F, 20.0F, 0.0F));
-		PartDefinition LeftWing = partdefinition.addOrReplaceChild("LeftWing", CubeListBuilder.create(), PartPose.offsetAndRotation(2.0F, 13.75F, -1.0F, 0.4363F, 0.0F, -0.1745F));
-		PartDefinition LeftWing_r1 = LeftWing.addOrReplaceChild("LeftWing_r1", CubeListBuilder.create().texOffs(0, 22).addBox(2.0F, -11.0F, 0.0F, 1.0F, 8.0F, 5.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(-2.0F, 9.5F, -4.0F, -0.1309F, 0.0F, 0.0F));
-		PartDefinition RightWing = partdefinition.addOrReplaceChild("RightWing", CubeListBuilder.create(), PartPose.offsetAndRotation(-2.5F, 13.5F, -0.5F, 0.4363F, 0.0F, 0.1745F));
-		PartDefinition RightWing_r1 = RightWing.addOrReplaceChild("RightWing_r1", CubeListBuilder.create().texOffs(15, 17).addBox(-6.0F, -10.0F, 0.0F, 1.0F, 8.0F, 5.0F, new CubeDeformation(0.0F)),
-				PartPose.offsetAndRotation(5.5F, 8.5F, -4.5F, -0.1309F, 0.0F, 0.0F));
-		return LayerDefinition.create(meshdefinition, 64, 64);
+		PartDefinition body = partdefinition.addOrReplaceChild("body", CubeListBuilder.create().texOffs(0, 0).addBox(-2.5F, -3.0F, -1.0F, 4.0F, 7.0F, 3.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.5F, 19.0F, 0.0F, 0.7854F, 0.0F, 0.0F));
+		PartDefinition head = body.addOrReplaceChild("head", CubeListBuilder.create().texOffs(0, 10).addBox(-2.5F, -2.5F, -1.0F, 3.0F, 3.0F, 3.0F, new CubeDeformation(0.0F)).texOffs(14, 0)
+				.addBox(-1.0F, -5.5F, -1.0F, 0.0F, 3.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(8, 16).addBox(-1.5F, -1.0F, -4.0F, 1.0F, 1.0F, 3.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.5F, -4.0F, 0.0F, -0.7854F, 0.0F, 0.0F));
+		PartDefinition tail = body.addOrReplaceChild("tail", CubeListBuilder.create().texOffs(0, 16).addBox(-2.0F, 0.0F, 0.0F, 4.0F, 5.0F, 0.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(-0.5F, 4.0F, 1.0F, 0.4363F, 0.0F, 0.0F));
+		PartDefinition wingleft = partdefinition.addOrReplaceChild("wingleft", CubeListBuilder.create().texOffs(12, 10).addBox(0.0F, -2.0F, 0.0F, 7.0F, 3.0F, 0.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(2.0F, 17.0F, -2.0F, -1.4673F, -0.8681F, 1.4355F));
+		PartDefinition wingright = partdefinition.addOrReplaceChild("wingright", CubeListBuilder.create().texOffs(12, 13).addBox(-7.0F, -2.0F, 0.0F, 7.0F, 3.0F, 0.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(-2.0F, 17.0F, -2.0F, -1.4673F, 0.8681F, -1.4355F));
+		PartDefinition legleft = partdefinition.addOrReplaceChild("legleft", CubeListBuilder.create().texOffs(16, 16).addBox(-1.0F, 0.0F, -1.0F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(1.5F, 21.0F, 1.0F));
+		PartDefinition legleft2 = partdefinition.addOrReplaceChild("legleft2", CubeListBuilder.create().texOffs(8, 20).addBox(0.0F, 0.0F, -1.0F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(-1.5F, 21.0F, 1.0F));
+		return LayerDefinition.create(meshdefinition, 32, 32);
 	}
 
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
-		Body.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		LeftLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		RightLeg.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		LeftWing.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		RightWing.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-	}
+	public void setupAnim(LivingEntityRenderState state) {
+		float limbSwing = state.walkAnimationPos;
+		float limbSwingAmount = state.walkAnimationSpeed;
+		float ageInTicks = state.ageInTicks;
+		float netHeadYaw = state.yRot;
+		float headPitch = state.xRot;
 
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
-		this.LeftWing.zRot = (Mth.sin(ageInTicks * 0.6F + 3) * 0.6F);
-		this.RightWing.zRot = (Mth.sin(ageInTicks * 0.6F) * 0.6F);
+		this.wingright.xRot = (Mth.sin(ageInTicks * 0.6F) * 0.6F);
+		this.wingleft.xRot = (Mth.sin(ageInTicks * 0.6F + 3) * 0.6F);
 	}
 }

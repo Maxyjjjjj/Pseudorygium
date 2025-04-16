@@ -14,6 +14,8 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.minecraft.world.entity.MobCategory;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 
 import com.pseudorygium.entity.ZorseEntity;
@@ -229,7 +231,6 @@ import com.pseudorygium.entity.CorsacFoxEntity;
 import com.pseudorygium.entity.CoralSnakeEntity;
 import com.pseudorygium.entity.CobraEntity;
 import com.pseudorygium.entity.CloudedLeopardEntity;
-import com.pseudorygium.entity.ClamEntity;
 import com.pseudorygium.entity.ChiruEntity;
 import com.pseudorygium.entity.ChimpanzeeEntity;
 import com.pseudorygium.entity.CheetahEntity;
@@ -251,6 +252,7 @@ import com.pseudorygium.entity.ButterflyEntity;
 import com.pseudorygium.entity.BullfinchEntity;
 import com.pseudorygium.entity.BuffaloEntity;
 import com.pseudorygium.entity.BrownBearEntity;
+import com.pseudorygium.entity.BoomerangProjectileEntity;
 import com.pseudorygium.entity.BoobyEntity;
 import com.pseudorygium.entity.BongoEntity;
 import com.pseudorygium.entity.BlueWhaleEntity;
@@ -697,10 +699,6 @@ public class PseudorygiumModEntities {
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<OctopusEntity>> OCTOPUS = register("octopus",
 			EntityType.Builder.<OctopusEntity>of(OctopusEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.6f, 1.8f));
-	public static final DeferredHolder<EntityType<?>, EntityType<ClamEntity>> CLAM = register("clam",
-			EntityType.Builder.<ClamEntity>of(ClamEntity::new, MobCategory.WATER_CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<AphidEntity>> APHID = register("aphid",
@@ -1295,11 +1293,13 @@ public class PseudorygiumModEntities {
 			EntityType.Builder.<HareEntity>of(HareEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
+	public static final DeferredHolder<EntityType<?>, EntityType<BoomerangProjectileEntity>> BOOMERANG_PROJECTILE = register("boomerang_projectile",
+			EntityType.Builder.<BoomerangProjectileEntity>of(BoomerangProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	// Start of user code block custom entities
 	// End of user code block custom entities
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
-		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
+		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(ResourceKey.create(Registries.ENTITY_TYPE, ResourceLocation.fromNamespaceAndPath(PseudorygiumMod.MODID, registryname))));
 	}
 
 	@SubscribeEvent
@@ -1410,7 +1410,6 @@ public class PseudorygiumModEntities {
 		BongoEntity.init(event);
 		CaterpillarEntity.init(event);
 		OctopusEntity.init(event);
-		ClamEntity.init(event);
 		AphidEntity.init(event);
 		JumpingSpiderEntity.init(event);
 		LadybugEntity.init(event);
@@ -1670,7 +1669,6 @@ public class PseudorygiumModEntities {
 		event.put(BONGO.get(), BongoEntity.createAttributes().build());
 		event.put(CATERPILLAR.get(), CaterpillarEntity.createAttributes().build());
 		event.put(OCTOPUS.get(), OctopusEntity.createAttributes().build());
-		event.put(CLAM.get(), ClamEntity.createAttributes().build());
 		event.put(APHID.get(), AphidEntity.createAttributes().build());
 		event.put(JUMPING_SPIDER.get(), JumpingSpiderEntity.createAttributes().build());
 		event.put(LADYBUG.get(), LadybugEntity.createAttributes().build());

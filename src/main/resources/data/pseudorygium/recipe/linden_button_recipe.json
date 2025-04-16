@@ -3,9 +3,7 @@
   "group": "wooden_button",
   "category": "redstone",
   "ingredients": [
-    {
-      "item": "pseudorygium:linden_planks"
-    }
+    "pseudorygium:linden_planks"
   ],
   "result": {
     "id": "pseudorygium:linden_button",

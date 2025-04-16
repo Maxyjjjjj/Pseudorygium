@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:baobab_log"
-    }
+    "a": "pseudorygium:baobab_log"
   },
   "result": {
     "id": "pseudorygium:baobab_wood",

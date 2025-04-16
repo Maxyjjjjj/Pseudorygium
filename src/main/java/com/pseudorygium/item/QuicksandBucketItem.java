@@ -1,16 +1,9 @@
 
 package com.pseudorygium.item;
 
-import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.InteractionResult;
-
-import com.pseudorygium.procedures.QuicksandBucketRightclickedOnBlockProcedure;
-
 public class QuicksandBucketItem extends Item {
-	public QuicksandBucketItem() {
-		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
+	public QuicksandBucketItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(1));
 	}
 
 	@Override

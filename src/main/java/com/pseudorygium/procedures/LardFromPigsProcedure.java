@@ -1,20 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.animal.Pig;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-
-import javax.annotation.Nullable;
-
-import com.pseudorygium.init.PseudorygiumModItems;
 
 @EventBusSubscriber
 public class LardFromPigsProcedure {

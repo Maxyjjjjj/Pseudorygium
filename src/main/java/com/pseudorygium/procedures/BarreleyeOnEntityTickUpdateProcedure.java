@@ -1,26 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
-
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-
-import javax.annotation.Nullable;
-
-import com.pseudorygium.entity.WhiteSharkEntity;
-import com.pseudorygium.entity.WhaleSharkEntity;
-import com.pseudorygium.entity.ShrimpEntity;
-import com.pseudorygium.entity.SawfishEntity;
-import com.pseudorygium.entity.PaddlefishEntity;
-import com.pseudorygium.entity.JellyfishEntity;
-import com.pseudorygium.entity.CrayfishEntity;
-import com.pseudorygium.entity.CarpEntity;
-import com.pseudorygium.entity.BelugaSturgeonEntity;
-import com.pseudorygium.entity.BarreleyeEntity;
-import com.pseudorygium.PseudorygiumMod;
 
 @EventBusSubscriber
 public class BarreleyeOnEntityTickUpdateProcedure {

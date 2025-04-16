@@ -1,23 +1,13 @@
 
 package com.pseudorygium.block;
 
-import net.minecraft.world.level.material.PushReaction;
-import net.minecraft.world.level.material.MapColor;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.SoundType;
-import net.minecraft.world.level.block.FlowerBlock;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.BlockGetter;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.tags.BlockTags;
-import net.minecraft.core.Direction;
-import net.minecraft.core.BlockPos;
+import net.minecraft.world.level.block.state.BlockBehaviour.Properties;
 
-public class MapleSaplingBlock extends FlowerBlock {
-	public MapleSaplingBlock() {
-		super(MobEffects.MOVEMENT_SPEED, 100, BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.NONE).pushReaction(PushReaction.DESTROY));
+public class MapleSaplingBlock extends SaplingBlock {
+	public static final TreeGrower TREE_GROWER = new TreeGrower("maple_sapling", Optional.empty(), Optional.of(getFeatureKey("pseudorygium:maple_tree")), Optional.empty());
+
+	public MapleSaplingBlock(BlockBehaviour.Properties properties) {
+		super(TREE_GROWER, properties.mapColor(MapColor.PLANT).randomTicks().sound(SoundType.GRASS).instabreak().noCollission().offsetType(BlockBehaviour.OffsetType.NONE).pushReaction(PushReaction.DESTROY));
 	}
 
 	@Override
@@ -30,16 +20,7 @@ public class MapleSaplingBlock extends FlowerBlock {
 		return 13;
 	}
 
-	private boolean canPlantTypeSurvive(BlockState state, LevelReader world, BlockPos pos) {
-		return state.is(BlockTags.DIRT) || state.getBlock() == Blocks.FARMLAND;
-	}
-
-	@Override
-	public boolean canSurvive(BlockState blockstate, LevelReader world, BlockPos pos) {
-		BlockPos posbelow = pos.below();
-		BlockState statebelow = world.getBlockState(posbelow);
-		if (blockstate.getBlock() == this)
-			return this.canPlantTypeSurvive(statebelow, world, posbelow);
-		return this.mayPlaceOn(statebelow, world, posbelow);
+	private static ResourceKey<ConfiguredFeature<?, ?>> getFeatureKey(String feature) {
+		return ResourceKey.create(Registries.CONFIGURED_FEATURE, ResourceLocation.parse(feature));
 	}
 }

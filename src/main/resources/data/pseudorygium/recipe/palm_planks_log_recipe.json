@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:palm_log"
-    }
+    "pseudorygium:palm_log"
   ],
   "result": {
     "id": "pseudorygium:palm_planks",

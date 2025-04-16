@@ -3,9 +3,7 @@
   "group": "wooden_button",
   "category": "redstone",
   "ingredients": [
-    {
-      "item": "pseudorygium:ginkgo_planks"
-    }
+    "pseudorygium:ginkgo_planks"
   ],
   "result": {
     "id": "pseudorygium:ginkgo_button",

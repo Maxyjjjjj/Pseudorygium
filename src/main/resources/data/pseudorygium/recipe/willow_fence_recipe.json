@@ -7,12 +7,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:willow_planks"
-    },
-    "b": {
-      "item": "minecraft:stick"
-    }
+    "a": "pseudorygium:willow_planks",
+    "b": "minecraft:stick"
   },
   "result": {
     "id": "pseudorygium:willow_fence",

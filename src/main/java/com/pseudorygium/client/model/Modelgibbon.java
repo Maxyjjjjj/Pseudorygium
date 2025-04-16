@@ -1,8 +1,8 @@
 package com.pseudorygium.client.model;
 
-import net.minecraft.world.entity.Entity;
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
@@ -13,13 +13,10 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.EntityModel;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 // Made with Blockbench 4.9.3
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modelgibbon<T extends Entity> extends EntityModel<T> {
+public class Modelgibbon extends EntityModel<LivingEntityRenderState> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("pseudorygium", "modelgibbon"), "main");
@@ -31,6 +28,7 @@ public class Modelgibbon<T extends Entity> extends EntityModel<T> {
 	public final ModelPart legleft;
 
 	public Modelgibbon(ModelPart root) {
+		super(root);
 		this.body = root.getChild("body");
 		this.head = root.getChild("head");
 		this.armleft = root.getChild("armleft");
@@ -52,17 +50,13 @@ public class Modelgibbon<T extends Entity> extends EntityModel<T> {
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
 
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
-		body.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		head.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		armleft.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		armright.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		legright.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		legleft.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-	}
+	public void setupAnim(LivingEntityRenderState state) {
+		float limbSwing = state.walkAnimationPos;
+		float limbSwingAmount = state.walkAnimationSpeed;
+		float ageInTicks = state.ageInTicks;
+		float netHeadYaw = state.yRot;
+		float headPitch = state.xRot;
 
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		this.head.yRot = netHeadYaw / (180F / (float) Math.PI);
 		this.head.xRot = headPitch / (180F / (float) Math.PI);
 		this.armright.xRot = Mth.cos(limbSwing * 0.6662F + (float) Math.PI) * limbSwingAmount;

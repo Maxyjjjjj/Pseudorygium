@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:sunflower"
-    },
-    {
-      "item": "minecraft:sunflower"
-    }
+    "minecraft:sunflower",
+    "minecraft:sunflower"
   ],
   "result": {
     "id": "pseudorygium:sunflower_seeds",

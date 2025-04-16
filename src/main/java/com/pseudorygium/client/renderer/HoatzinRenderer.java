@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class HoatzinRenderer extends MobRenderer<HoatzinEntity, LivingEntityRenderState, Modelhoatzin> {
+	private HoatzinEntity entity = null;
 
-import com.pseudorygium.entity.HoatzinEntity;
-import com.pseudorygium.client.model.Modelhoatzin;
-
-public class HoatzinRenderer extends MobRenderer<HoatzinEntity, Modelhoatzin<HoatzinEntity>> {
 	public HoatzinRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelhoatzin(context.bakeLayer(Modelhoatzin.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(HoatzinEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(HoatzinEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/hoatzin.png");
 	}
 }

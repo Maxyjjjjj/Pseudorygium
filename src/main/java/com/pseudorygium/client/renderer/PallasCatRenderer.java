@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class PallasCatRenderer extends MobRenderer<PallasCatEntity, LivingEntityRenderState, Modelpallas_cat> {
+	private PallasCatEntity entity = null;
 
-import com.pseudorygium.entity.PallasCatEntity;
-import com.pseudorygium.client.model.Modelpallas_cat;
-
-public class PallasCatRenderer extends MobRenderer<PallasCatEntity, Modelpallas_cat<PallasCatEntity>> {
 	public PallasCatRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelpallas_cat(context.bakeLayer(Modelpallas_cat.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(PallasCatEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(PallasCatEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/allasat.png");
 	}
 }

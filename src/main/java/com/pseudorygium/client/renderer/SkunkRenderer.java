@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class SkunkRenderer extends MobRenderer<SkunkEntity, LivingEntityRenderState, Modelskunk> {
+	private SkunkEntity entity = null;
 
-import com.pseudorygium.entity.SkunkEntity;
-import com.pseudorygium.client.model.Modelskunk;
-
-public class SkunkRenderer extends MobRenderer<SkunkEntity, Modelskunk<SkunkEntity>> {
 	public SkunkRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelskunk(context.bakeLayer(Modelskunk.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SkunkEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(SkunkEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/skunk.png");
 	}
 }

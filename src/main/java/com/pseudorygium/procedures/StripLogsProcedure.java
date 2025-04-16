@@ -1,29 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
-
-import net.minecraft.world.level.block.state.properties.Property;
-import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.level.GameType;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.AxeItem;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerPlayer;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.BlockPos;
-import net.minecraft.client.Minecraft;
-
-import javax.annotation.Nullable;
-
-import com.pseudorygium.init.PseudorygiumModBlocks;
 
 @EventBusSubscriber
 public class StripLogsProcedure {
@@ -43,17 +20,7 @@ public class StripLogsProcedure {
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() instanceof AxeItem) {
 			if (PseudorygiumModBlocks.HORNBEAM_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -90,17 +57,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.HORNBEAM_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -137,17 +94,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.WILLOW_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -184,17 +131,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.WILLOW_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -231,17 +168,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.LINDEN_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -278,17 +205,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.LINDEN_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -325,17 +242,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.POPLAR_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -372,17 +279,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.POPLAR_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -419,17 +316,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.BAOBAB_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -466,17 +353,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.BAOBAB_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -513,17 +390,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.MAPLE_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -591,17 +458,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.MAPLE_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -669,17 +526,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.BEECH_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -716,17 +563,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.BEECH_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -763,17 +600,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.PALM_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -810,17 +637,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.PALM_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -857,17 +674,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.ASPEN_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -904,17 +711,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.ASPEN_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -951,17 +748,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.GINKGO_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -998,17 +785,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.GINKGO_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -1045,17 +822,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.EUCALYPTUS_WOOD.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -1092,17 +859,7 @@ public class StripLogsProcedure {
 				}
 			}
 			if (PseudorygiumModBlocks.EUCALYPTUS_LOG.get() == (world.getBlockState(BlockPos.containing(x, y, z))).getBlock()) {
-				if (new Object() {
-					public boolean checkGamemode(Entity _ent) {
-						if (_ent instanceof ServerPlayer _serverPlayer) {
-							return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SURVIVAL;
-						} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
-							return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
-									&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SURVIVAL;
-						}
-						return false;
-					}
-				}.checkGamemode(entity)) {
+				if (getEntityGameType(entity) == GameType.SURVIVAL) {
 					if (world instanceof ServerLevel _level) {
 						(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).hurtAndBreak(1, _level, null, _stkprov -> {
 						});
@@ -1139,5 +896,16 @@ public class StripLogsProcedure {
 				}
 			}
 		}
+	}
+
+	private static GameType getEntityGameType(Entity entity) {
+		if (entity instanceof ServerPlayer serverPlayer) {
+			return serverPlayer.gameMode.getGameModeForPlayer();
+		} else if (entity instanceof Player player && player.level().isClientSide()) {
+			PlayerInfo playerInfo = Minecraft.getInstance().getConnection().getPlayerInfo(player.getGameProfile().getId());
+			if (playerInfo != null)
+				return playerInfo.getGameMode();
+		}
+		return null;
 	}
 }

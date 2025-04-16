@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class MeerkatRenderer extends MobRenderer<MeerkatEntity, LivingEntityRenderState, Modelmeerkat> {
+	private MeerkatEntity entity = null;
 
-import com.pseudorygium.entity.MeerkatEntity;
-import com.pseudorygium.client.model.Modelmeerkat;
-
-public class MeerkatRenderer extends MobRenderer<MeerkatEntity, Modelmeerkat<MeerkatEntity>> {
 	public MeerkatRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelmeerkat(context.bakeLayer(Modelmeerkat.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(MeerkatEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(MeerkatEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/meerkat.png");
 	}
 }

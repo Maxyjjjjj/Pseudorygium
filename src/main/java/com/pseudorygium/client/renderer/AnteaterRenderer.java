@@ -1,27 +1,31 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class AnteaterRenderer extends MobRenderer<AnteaterEntity, LivingEntityRenderState, Modelanteater> {
+	private AnteaterEntity entity = null;
 
-import com.pseudorygium.entity.AnteaterEntity;
-import com.pseudorygium.client.model.Modelanteater;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
-public class AnteaterRenderer extends MobRenderer<AnteaterEntity, Modelanteater<AnteaterEntity>> {
 	public AnteaterRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelanteater(context.bakeLayer(Modelanteater.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	protected void scale(AnteaterEntity entity, PoseStack poseStack, float f) {
-		poseStack.scale(1.2f, 1.2f, 1.2f);
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(AnteaterEntity entity) {
+	public void extractRenderState(AnteaterEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/anteater.png");
+	}
+
+	@Override
+	protected void scale(LivingEntityRenderState state, PoseStack poseStack) {
+		poseStack.scale(1.2f, 1.2f, 1.2f);
 	}
 }

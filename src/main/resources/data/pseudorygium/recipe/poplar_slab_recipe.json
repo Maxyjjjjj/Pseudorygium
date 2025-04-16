@@ -6,9 +6,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:poplar_planks"
-    }
+    "a": "pseudorygium:poplar_planks"
   },
   "result": {
     "id": "pseudorygium:poplar_slab",

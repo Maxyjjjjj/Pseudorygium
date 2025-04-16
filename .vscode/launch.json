@@ -1,0 +1,49 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Client",
+      "presentation": {
+        "group": "Mod Development - Pseudorygium",
+        "order": 0
+      },
+      "projectName": "Pseudorygium",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\mod_create\\Pseudorygium\\build\\moddev\\clientRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\mod_create\\Pseudorygium\\build\\moddev\\clientRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%D:\\mod_create\\Pseudorygium\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    },
+    {
+      "type": "java",
+      "request": "launch",
+      "name": "Server",
+      "presentation": {
+        "group": "Mod Development - Pseudorygium",
+        "order": 1
+      },
+      "projectName": "Pseudorygium",
+      "mainClass": "net.neoforged.devlaunch.Main",
+      "args": [
+        "@D:\\mod_create\\Pseudorygium\\build\\moddev\\serverRunProgramArgs.txt"
+      ],
+      "vmArgs": [
+        "@D:\\mod_create\\Pseudorygium\\build\\moddev\\serverRunVmArgs.txt",
+        "-Dfml.modFolders\u003dmcreator%%D:\\mod_create\\Pseudorygium\\bin\\main"
+      ],
+      "cwd": "${workspaceFolder}\\run",
+      "env": {},
+      "console": "internalConsole",
+      "shortenCommandLine": "none"
+    }
+  ]
+}

@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:stripped_willow_log"
-    }
+    "a": "pseudorygium:stripped_willow_log"
   },
   "result": {
     "id": "pseudorygium:stripped_willow_wood",

@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class ShrimpRenderer extends MobRenderer<ShrimpEntity, LivingEntityRenderState, Modelshrimp> {
+	private ShrimpEntity entity = null;
 
-import com.pseudorygium.entity.ShrimpEntity;
-import com.pseudorygium.client.model.Modelshrimp;
-
-public class ShrimpRenderer extends MobRenderer<ShrimpEntity, Modelshrimp<ShrimpEntity>> {
 	public ShrimpRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelshrimp(context.bakeLayer(Modelshrimp.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(ShrimpEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(ShrimpEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/shrimp.png");
 	}
 }

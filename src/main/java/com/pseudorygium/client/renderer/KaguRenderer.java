@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class KaguRenderer extends MobRenderer<KaguEntity, LivingEntityRenderState, Modelkagu> {
+	private KaguEntity entity = null;
 
-import com.pseudorygium.entity.KaguEntity;
-import com.pseudorygium.client.model.Modelkagu;
-
-public class KaguRenderer extends MobRenderer<KaguEntity, Modelkagu<KaguEntity>> {
 	public KaguRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelkagu(context.bakeLayer(Modelkagu.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(KaguEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(KaguEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/kagu.png");
 	}
 }

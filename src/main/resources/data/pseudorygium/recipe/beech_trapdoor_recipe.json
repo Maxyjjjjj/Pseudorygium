@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:beech_planks"
-    }
+    "a": "pseudorygium:beech_planks"
   },
   "result": {
     "id": "pseudorygium:beech_trapdoor",

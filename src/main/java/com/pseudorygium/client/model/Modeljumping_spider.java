@@ -1,7 +1,7 @@
 package com.pseudorygium.client.model;
 
-import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.entity.state.LivingEntityRenderState;
 import net.minecraft.client.model.geom.builders.PartDefinition;
 import net.minecraft.client.model.geom.builders.MeshDefinition;
 import net.minecraft.client.model.geom.builders.LayerDefinition;
@@ -12,13 +12,10 @@ import net.minecraft.client.model.geom.ModelPart;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.EntityModel;
 
-import com.mojang.blaze3d.vertex.VertexConsumer;
-import com.mojang.blaze3d.vertex.PoseStack;
-
 // Made with Blockbench 4.9.3
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
-public class Modeljumping_spider<T extends Entity> extends EntityModel<T> {
+public class Modeljumping_spider extends EntityModel<LivingEntityRenderState> {
 	// This layer location should be baked with EntityRendererProvider.Context in
 	// the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(ResourceLocation.fromNamespaceAndPath("pseudorygium", "modeljumping_spider"), "main");
@@ -33,6 +30,7 @@ public class Modeljumping_spider<T extends Entity> extends EntityModel<T> {
 	public final ModelPart leg7;
 
 	public Modeljumping_spider(ModelPart root) {
+		super(root);
 		this.abdomen = root.getChild("abdomen");
 		this.leg0 = root.getChild("leg0");
 		this.leg1 = root.getChild("leg1");
@@ -72,19 +70,12 @@ public class Modeljumping_spider<T extends Entity> extends EntityModel<T> {
 		return LayerDefinition.create(meshdefinition, 64, 64);
 	}
 
-	@Override
-	public void renderToBuffer(PoseStack poseStack, VertexConsumer vertexConsumer, int packedLight, int packedOverlay, int rgb) {
-		abdomen.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		leg0.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		leg1.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		leg2.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		leg3.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		leg4.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		leg5.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		leg6.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-		leg7.render(poseStack, vertexConsumer, packedLight, packedOverlay, rgb);
-	}
+	public void setupAnim(LivingEntityRenderState state) {
+		float limbSwing = state.walkAnimationPos;
+		float limbSwingAmount = state.walkAnimationSpeed;
+		float ageInTicks = state.ageInTicks;
+		float netHeadYaw = state.yRot;
+		float headPitch = state.xRot;
 
-	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	}
 }

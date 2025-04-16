@@ -1,6 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
+import net.neoforged.bus.api.Event;
 
 public class EarthwormEntityNaturalEntitySpawningConditionProcedure {
 	public static boolean execute(LevelAccessor world) {

@@ -1,72 +1,86 @@
 
 package com.pseudorygium.item;
 
-import net.neoforged.neoforge.registries.RegisterEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ArmorMaterial;
-import net.minecraft.world.item.ArmorItem;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.core.Holder;
-import net.minecraft.Util;
-
-import java.util.List;
-import java.util.EnumMap;
-
-import com.pseudorygium.init.PseudorygiumModItems;
+import java.util.Map;
+import java.util.function.Consumer;
+import net.minecraft.client.model.Model;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public abstract class CobaltArmorItem extends ArmorItem {
-	public static Holder<ArmorMaterial> ARMOR_MATERIAL = null;
+
+	public static ArmorMaterial ARMOR_MATERIAL = new ArmorMaterial(23, Map.of(ArmorType.BOOTS, 3, ArmorType.LEGGINGS, 5, ArmorType.CHESTPLATE, 7, ArmorType.HELMET, 3, ArmorType.BODY, 7), 14,
+			DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), 1f, 0f, TagKey.create(Registries.ITEM, ResourceLocation.parse("pseudorygium:cobalt_armor_repair_items")),
+			ResourceKey.create(EquipmentAssets.ROOT_ID, ResourceLocation.parse("pseudorygium:cobalt_armor")));
 
 	@SubscribeEvent
-	public static void registerArmorMaterial(RegisterEvent event) {
-		event.register(Registries.ARMOR_MATERIAL, registerHelper -> {
-			ArmorMaterial armorMaterial = new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map -> {
-				map.put(ArmorItem.Type.BOOTS, 3);
-				map.put(ArmorItem.Type.LEGGINGS, 5);
-				map.put(ArmorItem.Type.CHESTPLATE, 7);
-				map.put(ArmorItem.Type.HELMET, 3);
-				map.put(ArmorItem.Type.BODY, 7);
-			}), 14, DeferredHolder.create(Registries.SOUND_EVENT, ResourceLocation.parse("item.armor.equip_diamond")), () -> Ingredient.of(new ItemStack(PseudorygiumModItems.COBALT_INGOT.get())),
-					List.of(new ArmorMaterial.Layer(ResourceLocation.parse("pseudorygium:cobalt_"))), 1f, 0f);
-			registerHelper.register(ResourceLocation.parse("pseudorygium:cobalt_armor"), armorMaterial);
-			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
-		});
+	public static void registerItemExtensions(RegisterClientExtensionsEvent event) {
+		event.registerItem(new IClientItemExtensions() {
+
+			@Override
+			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
+				return ResourceLocation.parse("pseudorygium:textures/models/armor/cobalt__layer_1.png");
+			}
+		}, PseudorygiumModItems.COBALT_ARMOR_HELMET.get());
+
+		event.registerItem(new IClientItemExtensions() {
+
+			@Override
+			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
+				return ResourceLocation.parse("pseudorygium:textures/models/armor/cobalt__layer_1.png");
+			}
+		}, PseudorygiumModItems.COBALT_ARMOR_CHESTPLATE.get());
+
+		event.registerItem(new IClientItemExtensions() {
+
+			@Override
+			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
+				return ResourceLocation.parse("pseudorygium:textures/models/armor/cobalt__layer_2.png");
+			}
+		}, PseudorygiumModItems.COBALT_ARMOR_LEGGINGS.get());
+
+		event.registerItem(new IClientItemExtensions() {
+
+			@Override
+			public ResourceLocation getArmorTexture(ItemStack stack, EquipmentClientInfo.LayerType type, EquipmentClientInfo.Layer layer, ResourceLocation _default) {
+				return ResourceLocation.parse("pseudorygium:textures/models/armor/cobalt__layer_1.png");
+			}
+		}, PseudorygiumModItems.COBALT_ARMOR_BOOTS.get());
 	}
 
-	public CobaltArmorItem(ArmorItem.Type type, Item.Properties properties) {
+	private CobaltArmorItem(ArmorType type, Item.Properties properties) {
 		super(ARMOR_MATERIAL, type, properties);
 	}
 
 	public static class Helmet extends CobaltArmorItem {
-		public Helmet() {
-			super(ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(23)));
+
+		public Helmet(Item.Properties properties) {
+			super(ArmorType.HELMET, properties);
 		}
+
 	}
 
 	public static class Chestplate extends CobaltArmorItem {
-		public Chestplate() {
-			super(ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(23)));
+
+		public Chestplate(Item.Properties properties) {
+			super(ArmorType.CHESTPLATE, properties);
 		}
+
 	}
 
 	public static class Leggings extends CobaltArmorItem {
-		public Leggings() {
-			super(ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(23)));
+
+		public Leggings(Item.Properties properties) {
+			super(ArmorType.LEGGINGS, properties);
 		}
+
 	}
 
 	public static class Boots extends CobaltArmorItem {
-		public Boots() {
-			super(ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(23)));
+
+		public Boots(Item.Properties properties) {
+			super(ArmorType.BOOTS, properties);
 		}
+
 	}
+
 }

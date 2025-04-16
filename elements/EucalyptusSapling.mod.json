@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "plant",
   "definition": {
     "renderType": 12,
@@ -10,9 +10,26 @@
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "plantType": "normal",
+    "plantType": "sapling",
     "suspiciousStewEffect": "SPEED",
     "suspiciousStewDuration": 100,
+    "secondaryTreeChance": 0.1,
+    "trees": [
+      {
+        "value": "CUSTOM:EucalyptusTree"
+      },
+      {
+        "value": "CUSTOM:EucalyptusBushlet"
+      }
+    ],
+    "flowerTrees": [
+      null,
+      null
+    ],
+    "megaTrees": [
+      null,
+      null
+    ],
     "growapableSpawnType": "Plains",
     "growapableMaxHeight": 3,
     "customBoundingBox": false,
@@ -42,6 +59,7 @@
     "luminance": 0,
     "unbreakable": false,
     "isSolid": false,
+    "isWaterloggable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
       "value": "PLANT"

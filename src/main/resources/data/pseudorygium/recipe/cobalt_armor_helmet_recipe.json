@@ -6,9 +6,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:cobalt_ingot"
-    }
+    "a": "pseudorygium:cobalt_ingot"
   },
   "result": {
     "id": "pseudorygium:cobalt_armor_helmet",

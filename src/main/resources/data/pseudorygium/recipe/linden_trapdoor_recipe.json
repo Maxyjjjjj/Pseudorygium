@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:linden_planks"
-    }
+    "a": "pseudorygium:linden_planks"
   },
   "result": {
     "id": "pseudorygium:linden_trapdoor",

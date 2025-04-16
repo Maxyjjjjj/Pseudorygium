@@ -1,31 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.monster.Spider;
-import net.minecraft.world.entity.monster.Silverfish;
-import net.minecraft.world.entity.monster.Endermite;
-import net.minecraft.world.entity.monster.CaveSpider;
-import net.minecraft.world.entity.animal.Bee;
-import net.minecraft.world.entity.ambient.Bat;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.core.BlockPos;
-
-import com.pseudorygium.init.PseudorygiumModBlocks;
-import com.pseudorygium.entity.RatEntity;
-import com.pseudorygium.entity.MouseEntity;
-import com.pseudorygium.entity.MantisEntity;
-import com.pseudorygium.entity.LadybugEntity;
-import com.pseudorygium.entity.JumpingSpiderEntity;
-import com.pseudorygium.entity.HummingbirdEntity;
-import com.pseudorygium.entity.EarthwormEntityEntity;
-import com.pseudorygium.entity.CaterpillarEntity;
-import com.pseudorygium.entity.ButterflyEntity;
-import com.pseudorygium.entity.AphidEntity;
-import com.pseudorygium.entity.AntEntity;
-import com.pseudorygium.PseudorygiumMod;
+import net.neoforged.bus.api.Event;
 
 public class VenusFlytrapMobplayerCollidesWithPlantProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {

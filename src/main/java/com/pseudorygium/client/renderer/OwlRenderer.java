@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class OwlRenderer extends MobRenderer<OwlEntity, LivingEntityRenderState, Modelowl> {
+	private OwlEntity entity = null;
 
-import com.pseudorygium.entity.OwlEntity;
-import com.pseudorygium.client.model.Modelowl;
-
-public class OwlRenderer extends MobRenderer<OwlEntity, Modelowl<OwlEntity>> {
 	public OwlRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelowl(context.bakeLayer(Modelowl.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(OwlEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(OwlEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/owl_eagle.png");
 	}
 }

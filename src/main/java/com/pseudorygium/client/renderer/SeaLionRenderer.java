@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class SeaLionRenderer extends MobRenderer<SeaLionEntity, LivingEntityRenderState, Modelsea_lion> {
+	private SeaLionEntity entity = null;
 
-import com.pseudorygium.entity.SeaLionEntity;
-import com.pseudorygium.client.model.Modelsea_lion;
-
-public class SeaLionRenderer extends MobRenderer<SeaLionEntity, Modelsea_lion<SeaLionEntity>> {
 	public SeaLionRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelsea_lion(context.bakeLayer(Modelsea_lion.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SeaLionEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(SeaLionEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/sea_lion.png");
 	}
 }

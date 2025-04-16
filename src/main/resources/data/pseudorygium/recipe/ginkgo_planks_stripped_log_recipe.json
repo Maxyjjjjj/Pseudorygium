@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:stripped_ginkgo_log"
-    }
+    "pseudorygium:stripped_ginkgo_log"
   ],
   "result": {
     "id": "pseudorygium:ginkgo_planks",

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "minecraft:leaves"
-    }
+    "#minecraft:leaves"
   ],
   "result": {
     "id": "pseudorygium:leaf",

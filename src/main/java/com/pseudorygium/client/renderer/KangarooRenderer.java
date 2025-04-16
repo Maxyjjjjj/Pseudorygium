@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class KangarooRenderer extends MobRenderer<KangarooEntity, LivingEntityRenderState, Modelkangaroo> {
+	private KangarooEntity entity = null;
 
-import com.pseudorygium.entity.KangarooEntity;
-import com.pseudorygium.client.model.Modelkangaroo;
-
-public class KangarooRenderer extends MobRenderer<KangarooEntity, Modelkangaroo<KangarooEntity>> {
 	public KangarooRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelkangaroo(context.bakeLayer(Modelkangaroo.LAYER_LOCATION)), 0.9f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(KangarooEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(KangarooEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/kangaroo.png");
 	}
 }

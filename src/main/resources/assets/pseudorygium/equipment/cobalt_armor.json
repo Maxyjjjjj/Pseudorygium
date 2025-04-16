@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "pseudorygium:cobalt_armor"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "pseudorygium:cobalt_armor"
+      }
+    ]
+  }
+}

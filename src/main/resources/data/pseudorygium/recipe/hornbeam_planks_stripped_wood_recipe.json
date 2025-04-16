@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:stripped_hornbeam_wood"
-    }
+    "pseudorygium:stripped_hornbeam_wood"
   ],
   "result": {
     "id": "pseudorygium:hornbeam_planks",

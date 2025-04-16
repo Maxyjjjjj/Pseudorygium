@@ -1,0 +1,8 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "particle": "pseudorygium:block/ash_planks",
+    "texture": "pseudorygium:block/ash_planks"
+  },
+  "render_type": "solid"
+}

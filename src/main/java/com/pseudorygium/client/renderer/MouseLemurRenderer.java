@@ -1,27 +1,31 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class MouseLemurRenderer extends MobRenderer<MouseLemurEntity, LivingEntityRenderState, Modelmouse_lemur> {
+	private MouseLemurEntity entity = null;
 
-import com.pseudorygium.entity.MouseLemurEntity;
-import com.pseudorygium.client.model.Modelmouse_lemur;
-
-import com.mojang.blaze3d.vertex.PoseStack;
-
-public class MouseLemurRenderer extends MobRenderer<MouseLemurEntity, Modelmouse_lemur<MouseLemurEntity>> {
 	public MouseLemurRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelmouse_lemur(context.bakeLayer(Modelmouse_lemur.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	protected void scale(MouseLemurEntity entity, PoseStack poseStack, float f) {
-		poseStack.scale(0.45f, 0.45f, 0.45f);
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(MouseLemurEntity entity) {
+	public void extractRenderState(MouseLemurEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/mouse_lemur.png");
+	}
+
+	@Override
+	protected void scale(LivingEntityRenderState state, PoseStack poseStack) {
+		poseStack.scale(0.45f, 0.45f, 0.45f);
 	}
 }

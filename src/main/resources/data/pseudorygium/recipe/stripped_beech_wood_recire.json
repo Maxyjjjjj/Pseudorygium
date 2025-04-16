@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:stripped_beech_log"
-    }
+    "a": "pseudorygium:stripped_beech_log"
   },
   "result": {
     "id": "pseudorygium:stripped_beech_wood",

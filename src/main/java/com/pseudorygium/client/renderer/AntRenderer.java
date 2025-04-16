@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class AntRenderer extends MobRenderer<AntEntity, LivingEntityRenderState, Modelant> {
+	private AntEntity entity = null;
 
-import com.pseudorygium.entity.AntEntity;
-import com.pseudorygium.client.model.Modelant;
-
-public class AntRenderer extends MobRenderer<AntEntity, Modelant<AntEntity>> {
 	public AntRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelant(context.bakeLayer(Modelant.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(AntEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(AntEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/ant.png");
 	}
 }

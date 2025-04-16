@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:stripped_eucalyptus_wood"
-    }
+    "pseudorygium:stripped_eucalyptus_wood"
   ],
   "result": {
     "id": "pseudorygium:eucalyptus_planks",

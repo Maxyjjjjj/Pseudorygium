@@ -1,13 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.registries.Registries;
-
-import com.pseudorygium.entity.HedgehogEntity;
+import net.neoforged.bus.api.Event;
 
 public class HedgehogRightClickedOnEntityProcedure {
 	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {

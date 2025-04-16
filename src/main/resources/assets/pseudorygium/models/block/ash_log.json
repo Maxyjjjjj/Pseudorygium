@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "pseudorygium:block/ash_log_top",
+    "up": "pseudorygium:block/ash_log_top",
+    "north": "pseudorygium:block/ash_log",
+    "east": "pseudorygium:block/ash_log",
+    "south": "pseudorygium:block/ash_log",
+    "west": "pseudorygium:block/ash_log",
+    "particle": "pseudorygium:block/ash_log_top"
+  },
+  "render_type": "solid"
+}

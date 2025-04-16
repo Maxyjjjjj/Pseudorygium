@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:stripped_maple_wood"
-    }
+    "pseudorygium:stripped_maple_wood"
   ],
   "result": {
     "id": "pseudorygium:maple_planks",

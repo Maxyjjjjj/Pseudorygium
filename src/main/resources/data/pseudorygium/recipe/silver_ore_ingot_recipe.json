@@ -7,9 +7,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:silver_nugget"
-    }
+    "a": "pseudorygium:silver_nugget"
   },
   "result": {
     "id": "pseudorygium:silver_ingot",

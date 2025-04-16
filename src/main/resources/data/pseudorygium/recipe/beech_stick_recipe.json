@@ -7,9 +7,7 @@
     "a"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:beech_planks"
-    }
+    "a": "pseudorygium:beech_planks"
   },
   "result": {
     "id": "minecraft:stick",

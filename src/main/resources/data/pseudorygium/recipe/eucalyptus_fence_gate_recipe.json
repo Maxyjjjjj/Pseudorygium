@@ -7,12 +7,8 @@
     "aba"
   ],
   "key": {
-    "a": {
-      "item": "minecraft:stick"
-    },
-    "b": {
-      "item": "pseudorygium:eucalyptus_planks"
-    }
+    "a": "minecraft:stick",
+    "b": "pseudorygium:eucalyptus_planks"
   },
   "result": {
     "id": "pseudorygium:eucalyptus_fence_gate",

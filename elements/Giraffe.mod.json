@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "livingentity",
   "definition": {
     "mobName": "Giraffe",
@@ -29,6 +29,7 @@
         "glow": false
       }
     ],
+    "animations": [],
     "modelWidth": 1.4,
     "modelHeight": 3.5,
     "modelShadowSize": 1.2000000000000002,
@@ -88,7 +89,6 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": false,

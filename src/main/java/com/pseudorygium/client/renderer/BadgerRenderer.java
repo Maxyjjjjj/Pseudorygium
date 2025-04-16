@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class BadgerRenderer extends MobRenderer<BadgerEntity, LivingEntityRenderState, Modelbadger> {
+	private BadgerEntity entity = null;
 
-import com.pseudorygium.entity.BadgerEntity;
-import com.pseudorygium.client.model.Modelbadger;
-
-public class BadgerRenderer extends MobRenderer<BadgerEntity, Modelbadger<BadgerEntity>> {
 	public BadgerRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelbadger(context.bakeLayer(Modelbadger.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(BadgerEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(BadgerEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/badger.png");
 	}
 }

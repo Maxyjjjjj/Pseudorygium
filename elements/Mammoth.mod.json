@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "livingentity",
   "definition": {
     "mobName": "Mammoth",
@@ -29,6 +29,7 @@
         "glow": false
       }
     ],
+    "animations": [],
     "modelWidth": 2.1,
     "modelHeight": 3.2,
     "modelShadowSize": 2.0,
@@ -88,7 +89,6 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 45,
     "inventoryStackSize": 128,
     "disableCollisions": false,

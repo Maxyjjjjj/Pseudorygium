@@ -3,9 +3,7 @@
   "group": "wooden_button",
   "category": "redstone",
   "ingredients": [
-    {
-      "item": "pseudorygium:aspen_planks"
-    }
+    "pseudorygium:aspen_planks"
   ],
   "result": {
     "id": "pseudorygium:aspen_button",

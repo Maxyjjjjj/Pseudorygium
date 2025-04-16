@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class JumpingSpiderRenderer extends MobRenderer<JumpingSpiderEntity, LivingEntityRenderState, Modeljumping_spider> {
+	private JumpingSpiderEntity entity = null;
 
-import com.pseudorygium.entity.JumpingSpiderEntity;
-import com.pseudorygium.client.model.Modeljumping_spider;
-
-public class JumpingSpiderRenderer extends MobRenderer<JumpingSpiderEntity, Modeljumping_spider<JumpingSpiderEntity>> {
 	public JumpingSpiderRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modeljumping_spider(context.bakeLayer(Modeljumping_spider.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(JumpingSpiderEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(JumpingSpiderEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/jumping_spider.png");
 	}
 }

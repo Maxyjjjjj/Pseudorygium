@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:maple_log"
-    }
+    "a": "pseudorygium:maple_log"
   },
   "result": {
     "id": "pseudorygium:maple_wood",

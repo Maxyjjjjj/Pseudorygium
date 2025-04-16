@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class SeadragonRenderer extends MobRenderer<SeadragonEntity, LivingEntityRenderState, Modelseadragon> {
+	private SeadragonEntity entity = null;
 
-import com.pseudorygium.entity.SeadragonEntity;
-import com.pseudorygium.client.model.Modelseadragon;
-
-public class SeadragonRenderer extends MobRenderer<SeadragonEntity, Modelseadragon<SeadragonEntity>> {
 	public SeadragonRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelseadragon(context.bakeLayer(Modelseadragon.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SeadragonEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(SeadragonEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/seadragon.png");
 	}
 }

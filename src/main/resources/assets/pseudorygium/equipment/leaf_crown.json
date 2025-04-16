@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "pseudorygium:leaf_crown"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "pseudorygium:leaf_crown"
+      }
+    ]
+  }
+}

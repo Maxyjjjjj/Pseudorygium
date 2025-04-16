@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "livingentity",
   "definition": {
     "mobName": "Beaver",
@@ -38,6 +38,7 @@
         }
       }
     ],
+    "animations": [],
     "modelWidth": 0.6,
     "modelHeight": 0.5,
     "modelShadowSize": 0.5,
@@ -97,7 +98,6 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": false,

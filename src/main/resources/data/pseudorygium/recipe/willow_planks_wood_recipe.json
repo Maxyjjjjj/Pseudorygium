@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:willow_wood"
-    }
+    "pseudorygium:willow_wood"
   ],
   "result": {
     "id": "pseudorygium:willow_planks",

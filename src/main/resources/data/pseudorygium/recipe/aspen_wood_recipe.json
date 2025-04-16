@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:aspen_log"
-    }
+    "a": "pseudorygium:aspen_log"
   },
   "result": {
     "id": "pseudorygium:aspen_wood",

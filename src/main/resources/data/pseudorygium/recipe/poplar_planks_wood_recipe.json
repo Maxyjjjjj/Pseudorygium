@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:poplar_wood"
-    }
+    "pseudorygium:poplar_wood"
   ],
   "result": {
     "id": "pseudorygium:poplar_planks",

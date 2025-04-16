@@ -1,15 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.neoforged.neoforge.event.entity.EntityJoinLevelEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
-
-import net.minecraft.world.entity.Entity;
-
-import javax.annotation.Nullable;
-
-import com.pseudorygium.entity.ButterflyEntity;
 
 @EventBusSubscriber
 public class ButterflyDisplayConditionProcedure {

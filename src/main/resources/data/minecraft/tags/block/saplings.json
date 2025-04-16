@@ -1,0 +1,16 @@
+{
+  "replace": false,
+  "values": [
+    "pseudorygium:eucalyptus_sapling",
+    "pseudorygium:ginkgo_sapling",
+    "pseudorygium:aspen_sapling",
+    "pseudorygium:beech_sapling",
+    "pseudorygium:palm_sapling",
+    "pseudorygium:maple_sapling",
+    "pseudorygium:baobab_sapling",
+    "pseudorygium:poplar_sapling",
+    "pseudorygium:willow_sapling",
+    "pseudorygium:linden_sapling",
+    "pseudorygium:hornbeam_sapling"
+  ]
+}

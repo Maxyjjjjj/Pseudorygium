@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class GibbonRenderer extends MobRenderer<GibbonEntity, LivingEntityRenderState, Modelgibbon> {
+	private GibbonEntity entity = null;
 
-import com.pseudorygium.entity.GibbonEntity;
-import com.pseudorygium.client.model.Modelgibbon;
-
-public class GibbonRenderer extends MobRenderer<GibbonEntity, Modelgibbon<GibbonEntity>> {
 	public GibbonRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelgibbon(context.bakeLayer(Modelgibbon.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(GibbonEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(GibbonEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/gibbonblack.png");
 	}
 }

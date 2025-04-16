@@ -6,9 +6,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:eucalyptus_planks"
-    }
+    "a": "pseudorygium:eucalyptus_planks"
   },
   "result": {
     "id": "pseudorygium:eucalyptus_pressure_plate",

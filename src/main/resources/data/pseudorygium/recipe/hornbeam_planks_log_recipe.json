@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:hornbeam_log"
-    }
+    "pseudorygium:hornbeam_log"
   ],
   "result": {
     "id": "pseudorygium:hornbeam_planks",

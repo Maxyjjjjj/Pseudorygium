@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "pseudorygium:cobalt_block"
-    }
+    "pseudorygium:cobalt_block"
   ],
   "result": {
     "id": "pseudorygium:cobalt_ingot",

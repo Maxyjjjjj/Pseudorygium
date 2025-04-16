@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class BandicootRenderer extends MobRenderer<BandicootEntity, LivingEntityRenderState, Modelbandicoot> {
+	private BandicootEntity entity = null;
 
-import com.pseudorygium.entity.BandicootEntity;
-import com.pseudorygium.client.model.Modelbandicoot;
-
-public class BandicootRenderer extends MobRenderer<BandicootEntity, Modelbandicoot<BandicootEntity>> {
 	public BandicootRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelbandicoot(context.bakeLayer(Modelbandicoot.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(BandicootEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(BandicootEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/bandicoot.png");
 	}
 }

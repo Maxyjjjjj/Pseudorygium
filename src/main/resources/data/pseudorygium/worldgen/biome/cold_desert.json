@@ -3,12 +3,17 @@
   "temperature": 0.4,
   "downfall": 0.1,
   "effects": {
-    "music": {
-      "sound": "music.overworld.desert",
-      "min_delay": 12000,
-      "max_delay": 24000,
-      "replace_current_music": true
-    },
+    "music": [
+      {
+        "weight": 1,
+        "data": {
+          "sound": "music.overworld.desert",
+          "min_delay": 12000,
+          "max_delay": 24000,
+          "replace_current_music": true
+        }
+      }
+    ],
     "foliage_color": -13210,
     "grass_color": -13210,
     "sky_color": 7972607,
@@ -40,13 +45,11 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": {
-    "air": [
-      "minecraft:cave",
-      "minecraft:cave_extra_underground",
-      "minecraft:canyon"
-    ]
-  },
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ],
   "features": [
     [],
     [

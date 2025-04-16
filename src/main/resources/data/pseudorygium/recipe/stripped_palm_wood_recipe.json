@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:stripped_palm_log"
-    }
+    "a": "pseudorygium:stripped_palm_log"
   },
   "result": {
     "id": "pseudorygium:stripped_palm_wood",

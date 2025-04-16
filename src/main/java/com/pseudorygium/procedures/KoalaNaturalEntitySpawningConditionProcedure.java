@@ -1,9 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
-
-import com.pseudorygium.init.PseudorygiumModBlocks;
+import net.neoforged.bus.api.Event;
 
 public class KoalaNaturalEntitySpawningConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {

@@ -1,0 +1,8 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "pseudorygium:block/ash_sapling",
+    "particle": "pseudorygium:block/ash_sapling"
+  },
+  "render_type": "cutout"
+}

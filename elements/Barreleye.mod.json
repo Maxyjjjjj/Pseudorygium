@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "livingentity",
   "definition": {
     "mobName": "Barreleye",
@@ -29,6 +29,7 @@
         "glow": false
       }
     ],
+    "animations": [],
     "modelWidth": 0.7,
     "modelHeight": 0.7,
     "modelShadowSize": 0.7,
@@ -88,7 +89,6 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": false,

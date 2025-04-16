@@ -1,7 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.minecraft.world.entity.TamableAnimal;
-import net.minecraft.world.entity.Entity;
+import net.neoforged.bus.api.Event;
 
 public class DogDisplayConditionProcedure {
 	public static boolean execute(Entity entity) {

@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class RoadrunnerRenderer extends MobRenderer<RoadrunnerEntity, LivingEntityRenderState, Modelroadrunner> {
+	private RoadrunnerEntity entity = null;
 
-import com.pseudorygium.entity.RoadrunnerEntity;
-import com.pseudorygium.client.model.Modelroadrunner;
-
-public class RoadrunnerRenderer extends MobRenderer<RoadrunnerEntity, Modelroadrunner<RoadrunnerEntity>> {
 	public RoadrunnerRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelroadrunner(context.bakeLayer(Modelroadrunner.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(RoadrunnerEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(RoadrunnerEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/roadrunner.png");
 	}
 }

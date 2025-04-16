@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class WildBoarRenderer extends MobRenderer<WildBoarEntity, LivingEntityRenderState, Modelwild_boar> {
+	private WildBoarEntity entity = null;
 
-import com.pseudorygium.entity.WildBoarEntity;
-import com.pseudorygium.client.model.Modelwild_boar;
-
-public class WildBoarRenderer extends MobRenderer<WildBoarEntity, Modelwild_boar<WildBoarEntity>> {
 	public WildBoarRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelwild_boar(context.bakeLayer(Modelwild_boar.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(WildBoarEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(WildBoarEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/wild_boar.png");
 	}
 }

@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:eucalyptus_log"
-    }
+    "a": "pseudorygium:eucalyptus_log"
   },
   "result": {
     "id": "pseudorygium:eucalyptus_wood",

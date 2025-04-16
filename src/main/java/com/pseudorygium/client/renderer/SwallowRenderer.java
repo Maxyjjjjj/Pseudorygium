@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class SwallowRenderer extends MobRenderer<SwallowEntity, LivingEntityRenderState, Modelswallow> {
+	private SwallowEntity entity = null;
 
-import com.pseudorygium.entity.SwallowEntity;
-import com.pseudorygium.client.model.Modelswallow;
-
-public class SwallowRenderer extends MobRenderer<SwallowEntity, Modelswallow<SwallowEntity>> {
 	public SwallowRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelswallow(context.bakeLayer(Modelswallow.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(SwallowEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(SwallowEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/swallow.png");
 	}
 }

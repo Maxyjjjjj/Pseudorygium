@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class WarthogRenderer extends MobRenderer<WarthogEntity, LivingEntityRenderState, Modelwarthog> {
+	private WarthogEntity entity = null;
 
-import com.pseudorygium.entity.WarthogEntity;
-import com.pseudorygium.client.model.Modelwarthog;
-
-public class WarthogRenderer extends MobRenderer<WarthogEntity, Modelwarthog<WarthogEntity>> {
 	public WarthogRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelwarthog(context.bakeLayer(Modelwarthog.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(WarthogEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(WarthogEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/warthog.png");
 	}
 }

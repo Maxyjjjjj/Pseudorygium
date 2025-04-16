@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:stripped_aspen_wood"
-    }
+    "pseudorygium:stripped_aspen_wood"
   ],
   "result": {
     "id": "pseudorygium:aspen_planks",

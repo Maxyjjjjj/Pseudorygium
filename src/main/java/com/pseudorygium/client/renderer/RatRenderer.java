@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class RatRenderer extends MobRenderer<RatEntity, LivingEntityRenderState, Modelrat> {
+	private RatEntity entity = null;
 
-import com.pseudorygium.entity.RatEntity;
-import com.pseudorygium.client.model.Modelrat;
-
-public class RatRenderer extends MobRenderer<RatEntity, Modelrat<RatEntity>> {
 	public RatRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelrat(context.bakeLayer(Modelrat.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(RatEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(RatEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/rat_grey.png");
 	}
 }

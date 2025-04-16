@@ -1,8 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.BlockPos;
+import net.neoforged.bus.api.Event;
 
 public class DogNaturalEntitySpawningConditionProcedure {
 	public static boolean execute(LevelAccessor world, double x, double y, double z) {

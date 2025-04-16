@@ -1,15 +1,6 @@
 package com.pseudorygium.procedures;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.world.entity.MobSpawnType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.BlockPos;
-
-import com.pseudorygium.init.PseudorygiumModEntities;
-import com.pseudorygium.init.PseudorygiumModBlocks;
-import com.pseudorygium.entity.AntEntity;
-import com.pseudorygium.PseudorygiumMod;
+import net.neoforged.bus.api.Event;
 
 public class AnthillEntityCollidesInTheBlockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -20,7 +11,7 @@ public class AnthillEntityCollidesInTheBlockProcedure {
 				entity.discard();
 			PseudorygiumMod.queueServerWork(2000, () -> {
 				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = PseudorygiumModEntities.ANT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
+					Entity entityToSpawn = PseudorygiumModEntities.ANT.get().spawn(_level, BlockPos.containing(x, y, z), EntitySpawnReason.MOB_SUMMONED);
 					if (entityToSpawn != null) {
 						entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
 					}

@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class HornbillRenderer extends MobRenderer<HornbillEntity, LivingEntityRenderState, Modelhornbill> {
+	private HornbillEntity entity = null;
 
-import com.pseudorygium.entity.HornbillEntity;
-import com.pseudorygium.client.model.Modelhornbill;
-
-public class HornbillRenderer extends MobRenderer<HornbillEntity, Modelhornbill<HornbillEntity>> {
 	public HornbillRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelhornbill(context.bakeLayer(Modelhornbill.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(HornbillEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(HornbillEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/hornbill.png");
 	}
 }

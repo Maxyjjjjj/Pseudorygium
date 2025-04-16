@@ -8,9 +8,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:lemming_hide"
-    }
+    "a": "pseudorygium:lemming_hide"
   },
   "result": {
     "id": "minecraft:leather",

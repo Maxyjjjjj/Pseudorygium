@@ -1,10 +1,10 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "tomato",
-    "customModelName": "Ranged item",
+    "customModelName": "Normal",
     "customProperties": {},
     "states": [],
     "name": "Tomato",
@@ -34,10 +34,9 @@
     "glowCondition": {
       "fixedValue": false
     },
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "enableRanged": true,
+    "enableRanged": false,
     "shootConstantly": false,
     "rangedItemChargesPower": false,
     "projectile": {
@@ -55,6 +54,13 @@
     },
     "isMeat": false,
     "isAlwaysEdible": false,
-    "animation": "eat"
+    "animation": "eat",
+    "isMusicDisc": false,
+    "musicDiscMusic": {
+      "value": ""
+    },
+    "musicDiscDescription": "",
+    "musicDiscLengthInTicks": 0,
+    "musicDiscAnalogOutput": 0
   }
 }

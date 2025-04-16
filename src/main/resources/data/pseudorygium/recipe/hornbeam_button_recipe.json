@@ -3,9 +3,7 @@
   "group": "wooden_button",
   "category": "redstone",
   "ingredients": [
-    {
-      "item": "pseudorygium:hornbeam_planks"
-    }
+    "pseudorygium:hornbeam_planks"
   ],
   "result": {
     "id": "pseudorygium:hornbeam_button",

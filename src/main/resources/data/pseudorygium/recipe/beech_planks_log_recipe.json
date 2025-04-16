@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:beech_log"
-    }
+    "pseudorygium:beech_log"
   ],
   "result": {
     "id": "pseudorygium:beech_planks",

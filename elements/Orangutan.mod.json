@@ -1,5 +1,5 @@
 {
-  "_fv": 69,
+  "_fv": 77,
   "_type": "livingentity",
   "definition": {
     "mobName": "Orangutan",
@@ -22,6 +22,7 @@
       "fixedValue": 1.0
     },
     "modelLayers": [],
+    "animations": [],
     "modelWidth": 1.0,
     "modelHeight": 1.5999999999999999,
     "modelShadowSize": 0.9,
@@ -81,7 +82,6 @@
       "fixedValue": true
     },
     "flyingMob": false,
-    "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "disableCollisions": false,

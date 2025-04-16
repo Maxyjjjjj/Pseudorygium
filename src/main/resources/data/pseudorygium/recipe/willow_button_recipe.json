@@ -3,9 +3,7 @@
   "group": "wooden_button",
   "category": "redstone",
   "ingredients": [
-    {
-      "item": "pseudorygium:willow_planks"
-    }
+    "pseudorygium:willow_planks"
   ],
   "result": {
     "id": "pseudorygium:willow_button",

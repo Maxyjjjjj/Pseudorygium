@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:linden_log"
-    }
+    "a": "pseudorygium:linden_log"
   },
   "result": {
     "id": "pseudorygium:linden_wood",

@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class BelugaSturgeonRenderer extends MobRenderer<BelugaSturgeonEntity, LivingEntityRenderState, Modelbeluga_sturgeon> {
+	private BelugaSturgeonEntity entity = null;
 
-import com.pseudorygium.entity.BelugaSturgeonEntity;
-import com.pseudorygium.client.model.Modelbeluga_sturgeon;
-
-public class BelugaSturgeonRenderer extends MobRenderer<BelugaSturgeonEntity, Modelbeluga_sturgeon<BelugaSturgeonEntity>> {
 	public BelugaSturgeonRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelbeluga_sturgeon(context.bakeLayer(Modelbeluga_sturgeon.LAYER_LOCATION)), 0.5f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(BelugaSturgeonEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(BelugaSturgeonEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/beluga_sturgeon.png");
 	}
 }

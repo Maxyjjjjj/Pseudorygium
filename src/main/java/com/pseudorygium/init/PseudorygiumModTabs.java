@@ -88,22 +88,47 @@ public class PseudorygiumModTabs {
 				tabData.accept(PseudorygiumModItems.CHAFFINCH_SPAWN_EGG.get());
 				tabData.accept(PseudorygiumModItems.BULLFINCH_SPAWN_EGG.get());
 				tabData.accept(PseudorygiumModItems.KIWI_SPAWN_EGG.get());
-				tabData.accept(PseudorygiumModItems.JAY_SPAWN_EGG.get());
-				tabData.accept(PseudorygiumModItems.RAVEN_SPAWN_EGG.get());
 				tabData.accept(PseudorygiumModItems.CROW_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.RAVEN_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.JAY_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.RHINOCEROS_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.WATERBUCK_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.PENGUIN_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.PEAFOWL_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.WALRUS_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.MEERKAT_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.VULTURE_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.PIGEON_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.BELLBIRD_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.LEMUR_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.ZORSE_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.ZONKEY_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.GORILLA_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.MOUSE_LEMUR_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.GIBBON_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.EMU_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.QUOLL_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.WOMBAT_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.BANDICOOT_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.NUMBAT_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.HAMSTER_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.LYNX_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.BACTRIAN_CAMEL_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.PHILIPPINE_EAGLE_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.EAGLE_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.OSPREY_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.MOUSE_SPAWN_EGG.get());
+				tabData.accept(PseudorygiumModItems.OWL_SPAWN_EGG.get());
 			}).withSearchBar().build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> PSEUDORYGIUM_FOODSTUFFS = REGISTRY.register("pseudorygium_foodstuffs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.pseudorygium.pseudorygium_foodstuffs")).icon(() -> new ItemStack(PseudorygiumModItems.RAW_VENISON.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PseudorygiumModItems.TOMATO.get());
 				tabData.accept(PseudorygiumModItems.MAIZE.get());
-			})
-
-					.build());
+			}).withTabsBefore(PSEUDORYGIUM_ANIMALS.getId()).build());
 
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-
 			tabData.accept(PseudorygiumModBlocks.HORNBEAM_WOOD.get().asItem());
 			tabData.accept(PseudorygiumModBlocks.HORNBEAM_LOG.get().asItem());
 			tabData.accept(PseudorygiumModBlocks.HORNBEAM_PLANKS.get().asItem());
@@ -254,39 +279,7 @@ public class PseudorygiumModTabs {
 			tabData.accept(PseudorygiumModBlocks.COBALT_ORE.get().asItem());
 			tabData.accept(PseudorygiumModBlocks.COBALT_BLOCK.get().asItem());
 			tabData.accept(PseudorygiumModBlocks.DEEPSLATE_COBALT_ORE.get().asItem());
-
-		} else if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
-
-			tabData.accept(PseudorygiumModBlocks.FORMICARIUM.get().asItem());
-
-		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
-
-			tabData.accept(PseudorygiumModItems.KATANA.get());
-			tabData.accept(PseudorygiumModItems.NETHERITE_KATANA.get());
-			tabData.accept(PseudorygiumModItems.COBALT_SWORD.get());
-			tabData.accept(PseudorygiumModItems.COBALT_ARMOR_HELMET.get());
-			tabData.accept(PseudorygiumModItems.COBALT_ARMOR_CHESTPLATE.get());
-			tabData.accept(PseudorygiumModItems.COBALT_ARMOR_LEGGINGS.get());
-			tabData.accept(PseudorygiumModItems.COBALT_ARMOR_BOOTS.get());
-
-		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
-
-		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
-
-			tabData.accept(PseudorygiumModItems.EARTHWORM.get());
-			tabData.accept(PseudorygiumModItems.PEAT.get());
-			tabData.accept(PseudorygiumModItems.LEMMING_HIDE.get());
-			tabData.accept(PseudorygiumModItems.LEAF.get());
-			tabData.accept(PseudorygiumModItems.PEARL.get());
-			tabData.accept(PseudorygiumModItems.SILVER_INGOT.get());
-			tabData.accept(PseudorygiumModItems.RAW_SILVER.get());
-			tabData.accept(PseudorygiumModItems.COBALT_INGOT.get());
-			tabData.accept(PseudorygiumModItems.SILVER_NUGGET.get());
-			tabData.accept(PseudorygiumModItems.TOMATO_SEEDS.get());
-			tabData.accept(PseudorygiumModItems.MAIZE_SEEDS.get());
-
 		} else if (tabData.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS) {
-
 			tabData.accept(PseudorygiumModBlocks.HORNBEAM_LEAVES.get().asItem());
 			tabData.accept(PseudorygiumModBlocks.HORNBEAM_SAPLING.get().asItem());
 			tabData.accept(PseudorygiumModBlocks.LINDEN_LEAVES.get().asItem());
@@ -323,9 +316,18 @@ public class PseudorygiumModTabs {
 			tabData.accept(PseudorygiumModBlocks.LAVENDER.get().asItem());
 			tabData.accept(PseudorygiumModBlocks.DAFFODIL.get().asItem());
 			tabData.accept(PseudorygiumModItems.QUICKSAND_BUCKET.get());
-
+		} else if (tabData.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+			tabData.accept(PseudorygiumModItems.EARTHWORM.get());
+			tabData.accept(PseudorygiumModItems.PEAT.get());
+			tabData.accept(PseudorygiumModItems.LEMMING_HIDE.get());
+			tabData.accept(PseudorygiumModItems.LEAF.get());
+			tabData.accept(PseudorygiumModItems.SILVER_INGOT.get());
+			tabData.accept(PseudorygiumModItems.RAW_SILVER.get());
+			tabData.accept(PseudorygiumModItems.COBALT_INGOT.get());
+			tabData.accept(PseudorygiumModItems.SILVER_NUGGET.get());
+			tabData.accept(PseudorygiumModItems.TOMATO_SEEDS.get());
+			tabData.accept(PseudorygiumModItems.MAIZE_SEEDS.get());
 		} else if (tabData.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
-
 			tabData.accept(PseudorygiumModItems.RAW_VENISON.get());
 			tabData.accept(PseudorygiumModItems.COOKED_VENISON.get());
 			tabData.accept(PseudorygiumModItems.ORANGE.get());
@@ -348,9 +350,7 @@ public class PseudorygiumModTabs {
 			tabData.accept(PseudorygiumModBlocks.COCONUT_BLOCK.get().asItem());
 			tabData.accept(PseudorygiumModItems.RAW_CARP.get());
 			tabData.accept(PseudorygiumModItems.COOKED_CARP.get());
-
 		} else if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-
 			tabData.accept(PseudorygiumModItems.CRAB_CLAW.get());
 			tabData.accept(PseudorygiumModItems.LEAF_CROWN_HELMET.get());
 			tabData.accept(PseudorygiumModItems.CARP_BUCKET.get());
@@ -360,7 +360,176 @@ public class PseudorygiumModTabs {
 			tabData.accept(PseudorygiumModItems.COBALT_HOE.get());
 			tabData.accept(PseudorygiumModItems.QUICKSAND_BUCKET.get());
 			tabData.accept(PseudorygiumModItems.MORIN_KHUUR.get());
-
+		} else if (tabData.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS) {
+			tabData.accept(PseudorygiumModBlocks.FORMICARIUM.get().asItem());
+		} else if (tabData.getTabKey() == CreativeModeTabs.COMBAT) {
+			tabData.accept(PseudorygiumModItems.KATANA.get());
+			tabData.accept(PseudorygiumModItems.NETHERITE_KATANA.get());
+			tabData.accept(PseudorygiumModItems.COBALT_SWORD.get());
+			tabData.accept(PseudorygiumModItems.COBALT_ARMOR_HELMET.get());
+			tabData.accept(PseudorygiumModItems.COBALT_ARMOR_CHESTPLATE.get());
+			tabData.accept(PseudorygiumModItems.COBALT_ARMOR_LEGGINGS.get());
+			tabData.accept(PseudorygiumModItems.COBALT_ARMOR_BOOTS.get());
+		} else if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
+			tabData.accept(PseudorygiumModItems.SNOWY_OWL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PTARMIGAN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.HOATZIN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.DUIKER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.WARTHOG_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CHIRU_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.HONEY_BADGER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MOHO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.BONGO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CATERPILLAR_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.OCTOPUS_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.APHID_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.JUMPING_SPIDER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.LADYBUG_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.EARTHWORM_ENTITY_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SHELTOPUSIK_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.ANT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.KOMODO_DRAGON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SALAMANDER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.LIZARD_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.IGUANA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SERVAL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PORCUPINE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MARABOU_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.ORYX_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.AARDWOLF_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.GERENUK_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.HYENA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CROCODILE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.FOREST_BUFFALO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.FENNEC_FOX_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.KAKAPO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.KAGU_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.RAT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.BEE_EATER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.BIRD_OF_PARADISE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CASSOWARY_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.TOUCAN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.GREBE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.RHEA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.DUCK_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MANDARIN_DUCK_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.JUNGLEFOWL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.HORNBILL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.FRIGATEBIRD_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SPOONBILL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.FLAMINGO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SHOEBILL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PRZEVALSKI_HORSE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.DOMESTIC_GOAT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.GOLDFINCH_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SHRIMP_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.YAK_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.IBIS_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CRAYFISH_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.FRUIT_BAT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PALLAS_CAT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.JERBOA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.ELEPHANT_SHREW_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.FERRET_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.POLECAT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SPRINGHARE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.OTTER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MARA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PUFFIN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MARMOT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.BLUE_WHALE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.ORCA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.BELUGA_WHALE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.BELUGA_STURGEON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SEA_OTTER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SEAGULL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.BOOBY_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SAWFISH_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.WHITE_SHARK_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PADDLEFISH_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.HUMPBACK_WHALE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.FIDDLER_CRAB_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SWAN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.TARSIER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MANATEE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PUMA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CARACAL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CLOUDED_LEOPARD_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.ANTEATER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.JAGUAR_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.FLYING_SQUIRREL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SEAHORSE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SEADRAGON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SUGAR_GLIDER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MOLE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.JELLYFISH_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.DRAGONFLY_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PROBOSCIS_MONKEY_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.HAMADRYAS_BABOON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CHACMA_BABOON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.OLIVE_BABOON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SIAMANG_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.STAG_BEETLE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.GECKO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MANTIS_SHRIMP_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.NAKED_MOLE_RAT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.POTOO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.TENREC_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.STAR_NOSED_MOLE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CAECILIAN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SEA_PIG_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.VONTSIRA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.COBRA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MONGOOSE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.RATTLESNAKE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.NARWHAL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SEA_LION_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.COYOTE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PYTHON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.WISENT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.ROADRUNNER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.GENET_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CAPERCAILLIE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.GROUSE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.TAPIR_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.TURKEY_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.LAMMERGEIER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.HOOPOE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.DODO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.WOOLLY_RHINOCEROS_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SMILODON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PROCOPTODON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MARSUPIAL_LION_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.THYLACINE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.WILD_BOAR_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.WOLVERINE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.STOAT_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.WEASEL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CORSAC_FOX_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SKUNK_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MANED_WOLF_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MUSK_DEER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.QUAIL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.WHALE_SHARK_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.TERRAPIN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.ANOLE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.AGAMA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.MOLOCH_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.LEAF_TAILED_GECKO_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CHAMELEON_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CARP_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.LEOPARD_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.PRONGHORN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.DOG_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SWALLOW_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.BEAVER_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.GRASS_SNAKE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CORAL_SNAKE_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.SISKIN_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CARDINAL_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.CANARY_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.KOALA_SPAWN_EGG.get());
+			tabData.accept(PseudorygiumModItems.HARE_SPAWN_EGG.get());
 		}
 	}
 }

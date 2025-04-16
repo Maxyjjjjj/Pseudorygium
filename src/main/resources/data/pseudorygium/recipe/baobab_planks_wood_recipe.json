@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:baobab_wood"
-    }
+    "pseudorygium:baobab_wood"
   ],
   "result": {
     "id": "pseudorygium:baobab_planks",

@@ -1,11 +1,8 @@
 
 package com.pseudorygium.item;
 
-import net.minecraft.world.item.Rarity;
-import net.minecraft.world.item.Item;
-
 public class LemmingHideItem extends Item {
-	public LemmingHideItem() {
-		super(new Item.Properties().stacksTo(64).rarity(Rarity.COMMON));
+	public LemmingHideItem(Item.Properties properties) {
+		super(properties.rarity(Rarity.COMMON).stacksTo(64));
 	}
 }

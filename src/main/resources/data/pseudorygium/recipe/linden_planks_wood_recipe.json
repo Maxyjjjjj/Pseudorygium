@@ -3,9 +3,7 @@
   "group": "planks",
   "category": "building",
   "ingredients": [
-    {
-      "item": "pseudorygium:linden_wood"
-    }
+    "pseudorygium:linden_wood"
   ],
   "result": {
     "id": "pseudorygium:linden_planks",

@@ -3,9 +3,7 @@
   "category": "food",
   "experience": 1,
   "cookingtime": 600,
-  "ingredient": {
-    "item": "pseudorygium:raw_turkey"
-  },
+  "ingredient": "pseudorygium:raw_turkey",
   "result": {
     "id": "pseudorygium:cooked_turkey"
   }

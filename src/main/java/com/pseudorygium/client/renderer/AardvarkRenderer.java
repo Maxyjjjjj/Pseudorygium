@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class AardvarkRenderer extends MobRenderer<AardvarkEntity, LivingEntityRenderState, Modelaardvark> {
+	private AardvarkEntity entity = null;
 
-import com.pseudorygium.entity.AardvarkEntity;
-import com.pseudorygium.client.model.Modelaardvark;
-
-public class AardvarkRenderer extends MobRenderer<AardvarkEntity, Modelaardvark<AardvarkEntity>> {
 	public AardvarkRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelaardvark(context.bakeLayer(Modelaardvark.LAYER_LOCATION)), 0.7f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(AardvarkEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(AardvarkEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/aardvark.png");
 	}
 }

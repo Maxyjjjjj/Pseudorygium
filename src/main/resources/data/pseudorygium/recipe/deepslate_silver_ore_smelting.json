@@ -3,9 +3,7 @@
   "category": "misc",
   "experience": 0.7,
   "cookingtime": 200,
-  "ingredient": {
-    "item": "pseudorygium:deepslate_silver_ore"
-  },
+  "ingredient": "pseudorygium:deepslate_silver_ore",
   "result": {
     "id": "pseudorygium:silver_ingot"
   }

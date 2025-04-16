@@ -7,9 +7,7 @@
     "aa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:stripped_ginkgo_log"
-    }
+    "a": "pseudorygium:stripped_ginkgo_log"
   },
   "result": {
     "id": "pseudorygium:stripped_ginkgo_wood",

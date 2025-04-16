@@ -3,12 +3,17 @@
   "temperature": 0.8,
   "downfall": 0.5,
   "effects": {
-    "music": {
-      "sound": "music.overworld.cherry_grove",
-      "min_delay": 12000,
-      "max_delay": 24000,
-      "replace_current_music": true
-    },
+    "music": [
+      {
+        "weight": 1,
+        "data": {
+          "sound": "music.overworld.cherry_grove",
+          "min_delay": 12000,
+          "max_delay": 24000,
+          "replace_current_music": true
+        }
+      }
+    ],
     "foliage_color": -8934609,
     "grass_color": -7226023,
     "sky_color": 7972607,
@@ -64,13 +69,11 @@
     "misc": []
   },
   "spawn_costs": {},
-  "carvers": {
-    "air": [
-      "minecraft:cave",
-      "minecraft:cave_extra_underground",
-      "minecraft:canyon"
-    ]
-  },
+  "carvers": [
+    "minecraft:cave",
+    "minecraft:cave_extra_underground",
+    "minecraft:canyon"
+  ],
   "features": [
     [],
     [

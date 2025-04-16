@@ -2,5 +2,5 @@
   "type": "neoforge:add_features",
   "biomes": "#pseudorygium:biomes_that_support_water_lakes",
   "features": "pseudorygium:water_lake",
-  "step": "surface_structures"
+  "step": "lakes"
 }

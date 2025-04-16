@@ -6,9 +6,7 @@
     "a a"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:leaf"
-    }
+    "a": "pseudorygium:leaf"
   },
   "result": {
     "id": "pseudorygium:leaf_crown_helmet",

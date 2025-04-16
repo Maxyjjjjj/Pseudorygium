@@ -1,20 +1,26 @@
 
 package com.pseudorygium.client.renderer;
 
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.client.renderer.entity.MobRenderer;
-import net.minecraft.client.renderer.entity.EntityRendererProvider;
+public class CapybaraRenderer extends MobRenderer<CapybaraEntity, LivingEntityRenderState, Modelcapybara> {
+	private CapybaraEntity entity = null;
 
-import com.pseudorygium.entity.CapybaraEntity;
-import com.pseudorygium.client.model.Modelcapybara;
-
-public class CapybaraRenderer extends MobRenderer<CapybaraEntity, Modelcapybara<CapybaraEntity>> {
 	public CapybaraRenderer(EntityRendererProvider.Context context) {
 		super(context, new Modelcapybara(context.bakeLayer(Modelcapybara.LAYER_LOCATION)), 1.1f);
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(CapybaraEntity entity) {
+	public LivingEntityRenderState createRenderState() {
+		return new LivingEntityRenderState();
+	}
+
+	@Override
+	public void extractRenderState(CapybaraEntity entity, LivingEntityRenderState state, float partialTicks) {
+		super.extractRenderState(entity, state, partialTicks);
+		this.entity = entity;
+	}
+
+	@Override
+	public ResourceLocation getTextureLocation(LivingEntityRenderState state) {
 		return ResourceLocation.parse("pseudorygium:textures/entities/capybara.png");
 	}
 }

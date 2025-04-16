@@ -8,9 +8,7 @@
     "aaa"
   ],
   "key": {
-    "a": {
-      "item": "pseudorygium:hornbeam_planks"
-    }
+    "a": "pseudorygium:hornbeam_planks"
   },
   "result": {
     "id": "pseudorygium:hornbeam_stairs",
